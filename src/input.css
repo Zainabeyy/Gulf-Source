@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Montserrat", serif;
+}
+.bar{
+  @apply w-7 h-[2px] bg-white block mb-1;
+}
+.bar.clicked:first-child {
+  transform: rotate(45deg) translate(0.14em, 0.5em);
+  transition: ease-out 0.5s;
+}
+.bar.clicked:nth-child(2) {
+  transform: scale(0.05);
+  transition: ease-out 0.5s;
+}
+.bar.clicked:last-child {
+  transform: rotate(135deg) translate(-0.05em, 0.42em);
+  transition: ease-out 0.5s;
+}
+.bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.menu{
+  @apply p-3 text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase;
+}
+.navItem{
+  @apply p-2;
+}
+.bgBlur{
+  @apply bg-MarianShade1 bg-opacity-55 backdrop-blur-md;
+}
+
+/* text gradient on hover  */
+
+.gradient{
+  @apply font-extrabold text-transparent bg-gradient-to-r from-[#2CA8DC] to-[#D0DF8A] bg-clip-text transition-all duration-300
+}
+.hover-gradient:hover{
+  @apply gradient;
+}
+.navLink{
+  @apply  transition-all duration-300 hover-gradient;
+}
+
+.gradient-line{
+  @apply bg-gradient-to-r from-[#2CA8DC] to-[#D0DF8A] h-[2px];
+}
+.backgroundImg{
+  background:url(/homePage/hero-bg-home.webp);
+  @apply bg-no-repeat bg-center bg-cover min-h-[500px] 2xl:h-[600px];
+}
+
+.gradientButton{
+  @apply text-13 font-bold  bg-gradient-to-r from-[#2CA8DC] to-[#D0DF8A] p-[2px] max-w-48 hover:p-[4px] transition-all;
+}
+.gradientButton div{
+  @apply h-full w-full px-8 py-[0.625rem];
+}
+
+@media (min-width: 768px) {
+  .menu{
+    @apply flex shadow-none m-0 w-auto;
+  }
+  .navItem{
+    @apply text-MarianTint4 px-4;
+  }
+}
