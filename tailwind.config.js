@@ -3,10 +3,18 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        Inter: ['Inter', 'sans-serif'],
+        Montserrat:['Montserrat', 'sans-serif']
+      },
       colors: {
         MarianShade1:'#25325E',
+        MarianShade2: '#1C2646',
         MarianTint4:'#D5D9E3',
-        MarianBlue:'#2E3F75'
+        MarianBlue:'#2E3F75',
+        PrimaryGradientClr1:'#2ca8dc',
+        PrimaryGradientClr2:'#d0df8a',
+        SaudiFlagTint2:'#739E83',
       },
       padding:{
         33:"8.25rem",
