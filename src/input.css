@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 body {
-  @apply font-Montserrat;
+  @apply font-Montserrat leading-tight;
 }
-section{
+section {
   @apply px-9 lg:px-33 2xl:px-52;
+}
+h1 {
+  @apply font-bold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl max-w-[27ch] leading-tight;
+}
+h2 {
+  @apply uppercase text-SaudiFlagTint2 font-bold text-base;
 }
 .bar {
   @apply w-7 h-[2px] bg-white block mb-1;
@@ -38,22 +44,22 @@ section{
 }
 @keyframes appears {
   from {
-    transform:scale(100%,0%) ;
+    transform: scale(100%, 0%);
     opacity: 0;
   }
   to {
-    transform: scale(100%,100%);
+    transform: scale(100%, 100%);
     opacity: 1;
   }
 }
-.menu.visible{
+.menu.visible {
   animation: appears 0.5s;
 }
 
 /* text gradient on hover  */
 
 .gradient {
-  @apply font-extrabold text-transparent bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 bg-clip-text transition-all duration-300;
+  @apply font-extrabold text-transparent bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 bg-clip-text transition-all duration-700;
 }
 .hover-gradient:hover {
   @apply gradient;
@@ -76,10 +82,15 @@ section{
   border-image-source: linear-gradient(to left, #2ca8dc, #d0df8a);
 }
 
-.companyDetailCard:nth-child(3) h2{
+.companyDetailCard:nth-child(3) h2 {
   @apply -translate-y-6 group-hover:translate-y-0;
 }
 
+.borderBottom-gradient {
+  @apply text-13 font-bold max-w-48 transition-all h-[2.75rem] px-8 py-[0.625rem] border-b-[3px] hover:border-b-[6px];
+  borderimageslice: 1;
+  borderimagesource: "linear-gradient(to left, #2ca8dc, #d0df8a)";
+}
 
 @media (min-width: 768px) {
   .menu {

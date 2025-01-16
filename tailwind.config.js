@@ -12,9 +12,12 @@ export default {
         MarianShade2: '#1C2646',
         MarianTint4:'#D5D9E3',
         MarianBlue:'#2E3F75',
+        MarianShade4: "#090D17",
         PrimaryGradientClr1:'#2ca8dc',
         PrimaryGradientClr2:'#d0df8a',
         SaudiFlagTint2:'#739E83',
+        SaudiFlagShade4: "#04130A",
+        PictonTint4:"#D5EEF8",
       },
       padding:{
         33:"8.25rem",

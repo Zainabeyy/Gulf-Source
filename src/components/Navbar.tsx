@@ -16,7 +16,7 @@ export default function Navbar() {
     setOpen(!isOpened);
   }
   return (
-    <header className="px-4 md:px-7 md:py-3 lg:px-33 2xl:px-52 md:flex md:justify-between md:align-middle w-full absolute z-30 bgBlur">
+    <header className="px-4 md:px-7 md:py-3 lg:px-33 2xl:px-52 md:flex md:justify-between md:align-middle w-full z-30 bgBlur fixed top-0">
       <nav className="flex justify-between  md:bg-transparent p-4">
         <Link to='/'><img src="/Logo.svg" alt="logo" /></Link>
         <button className="hamburger-nav md:hidden" onClick={updateMenu}>
@@ -28,7 +28,7 @@ export default function Navbar() {
 
       <ul className={menuClass}>
         <li className="navItem">
-          <Link to="#" className="navLink">
+          <Link to="/Products-Services" className="navLink">
             Products & Services
           </Link>
         </li>

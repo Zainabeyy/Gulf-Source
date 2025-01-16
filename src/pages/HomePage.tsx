@@ -1,7 +1,6 @@
-import React from "react";
-import CountUp from "react-countup";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Stats from "../components/Stats";
 
 export default function HomePage() {
   const companyDetails = [
@@ -21,27 +20,23 @@ export default function HomePage() {
       description: "Tailored solutions for your specific requirements.",
     },
   ];
-  const stats = [
-    {
-      number: 14,
-      descr: "Years in Business",
-    },
-    {
-      number: 100,
-      descr: "Dedicated Professionals",
-    },
-    {
-      number: 100,
-      descr: "Satisfied Clients",
-    },
-    {
-      number: 500,
-      descr: "successful projects completed",
-    },
+  const companyLogos = [
+    "aramco-logo",
+    "zeeco-logo",
+    "aramco-logo",
+    "zeeco-logo",
+    "aramco-logo",
+    "zeeco-logo",
   ];
-  const companyLogos = ["aramco-logo", "zeeco-logo"];
-  const [startCounting, setStartCounting] = React.useState(false);
-  const [isCountEnd, setCountEnd] = React.useState(false);
+
+  const companyLogoEl = companyLogos.map((item, index) => (
+    <div
+      className="w-60 h-60 flex justify-center items-center shadow-xl p-8"
+      key={index}
+    >
+      <img src={`/homePage/${item}.webp`} alt={item} />
+    </div>
+  ));
   return (
     <div>
       {/* hero section  */}
@@ -51,7 +46,7 @@ export default function HomePage() {
       </div>
       <section className="md:pt-36 pt-32 lg:pt-44 text-white min-h-[500px] 2xl:h-[37.5rem]">
         <div>
-          <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl min-w-[15ch] sm:w-[27ch] leading-tight">
+          <h1>
             Your Trusted Partner for Industrial Supplies and Services
           </h1>
           <div className="w-fit">
@@ -63,18 +58,18 @@ export default function HomePage() {
           </div>
         </div>
         <div className="pt-10 flex gap-2 flex-col xs:flex-row">
-          <button
-            type="button"
+          <Link
+            to=""
             className="bg-MarianBlue hover:bg-MarianShade1 gradient-border"
           >
             Get a Free Quote
-          </button>
-          <button
-            type="button"
+          </Link>
+          <Link
+            to=""
             className="gradient-border backdrop-blur-md bg-MarianShade1 bg-opacity-20 hover:bg-opacity-40"
           >
             Browse Services
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -115,10 +110,7 @@ export default function HomePage() {
 
       {/* company stats  */}
 
-      <section
-        className="bg-MarianShade2 py-16"
-        onMouseEnter={() => setStartCounting(true)}
-      >
+      <section className="bg-MarianShade2 py-16">
         <div>
           <img
             className="absolute right-5 sm:right-9 lg:right-33 2xl:right-52"
@@ -127,75 +119,98 @@ export default function HomePage() {
           />
         </div>
         <div className="relative z-10">
-          <h2 className="text-SaudiFlagTint2 uppercase font-bold text-base">
-            Stats
-          </h2>
+          <h2>Stats</h2>
           <div className="w-fit">
             <div className="gradient-line"></div>
             <p className="text-MarianTint4 font-medium text-xl">
               A Track Record of Excellence
             </p>
           </div>
-          <ul className="list-none flex flex-wrap justify-evenly pt-20 z-20">
-            {stats.map((item, index) => {
-              return (
-                <li
-                  className="text-MarianTint4 min-w-72 flex-1 text-bold font-Inter"
-                  key={index}
-                >
-                  <span className="text-MarianTint4 font-bold text-[4rem] block ">
-                    {startCounting ? (
-                      <>
-                        <CountUp
-                          start={0}
-                          end={item.number}
-                          duration={2}
-                          delay={0}
-                          onEnd={() => setCountEnd(true)}
-                        />
-                        <motion.span
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: isCountEnd ? 1 : 0 }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                        >
-                          {isCountEnd ? "+" : ""}
-                        </motion.span>
-                      </>
-                    ) : (
-                      "0"
-                    )}
-                  </span>
-                  {item.descr}
-                </li>
-              );
-            })}
-          </ul>
+          <Stats />
         </div>
       </section>
 
       {/* other company who worked with gulf source  */}
 
-      <section className="py-16">
-        <h2 className="text-SaudiFlagTint2 font-bold text-base uppercase">
-          Companies Who Put Trust In Us
-        </h2>
+      <section className="py-16 w-full overflow-x-hidden">
+        <h2>Companies Who Put Trust In Us</h2>
         <div className="w-fit mb-10">
           <div className="gradient-line"></div>
           <p className="text-xl text-MarianShade1">
             Serving the Best, Trusted by the Best
           </p>
         </div>
-        <div>
-          {companyLogos.map((item, index) => {
-            return (
-              <div
-                className="w-60 h-60 flex justify-center items-center shadow-2xl p-8"
-                key={index}
-              >
-                <img src={`/homePage/${item}.webp`} alt={item} />
-              </div>
-            );
-          })}
+
+        {/* logo carousel */}
+
+        <div className="flex flex-nowrap gap-6 w-full">
+          <motion.div
+            initial={{ x: "-15%" }}
+            animate={{ x: "-100%" }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            className="flex shrink-0 gap-6"
+          >
+            {companyLogoEl}
+          </motion.div>
+          <motion.div
+            initial={{ x: "-15%" }}
+            animate={{ x: "-100%" }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            className="flex shrink-0 gap-6"
+          >
+            {companyLogoEl}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* vision & mission  */}
+
+      <section
+        className="py-16 bg-no-repeat bg-center bg-cover bg-SaudiFlagShade4 flex flex-wrap gap-12 md:gap-0"
+        style={{
+          backgroundImage: "url('/homePage/vision-bg.webp')",
+        }}
+      >
+        <div className="md:w-1/2">
+          <div className="w-fit">
+            <h2>Our Vision & Mission</h2>
+            <div className="gradient-line m-0"></div>
+          </div>
+          <p className="font-medium text-MarianTint4 text-2xl capitalize my-12 max-w-[25ch]">
+            To be the leading provider of innovative industrial solutions
+          </p>
+          <Link
+            to=""
+            className="gradient-border backdrop-blur-md bg-MarianShade1 bg-opacity-20 hover:bg-opacity-40 text-white"
+          >
+            Read More About Us
+          </Link>
+        </div>
+        <div className="md:w-1/2 md:p-8">
+          <div className="relative">
+            <img
+              src="/homePage/quote.svg"
+              alt="quote symbol"
+              className="positon absolute -top-4 md:-left-8 mix-blend-plus-lighter"
+            />
+            <p className="text-white font-semibold text-base leading-[175%] mb-5">
+              Our vision is to be the industry leader, setting the benchmark for
+              excellence in industrial supply. We strive to be the go-to partner
+              for businesses seeking top-quality products, exceptional service,
+              and unparalleled expertise. By staying ahead of market trends and
+              embracing innovation, we aim to continuously expand our offerings
+              and exceed customer expectations.
+            </p>
+            <img
+              src="/homePage/quote.svg"
+              alt="quote symbol"
+              className="positon absolute rotate-180 bottom-0 right-0 mix-blend-plus-lighter"
+            />
+          </div>
+          <div className="text-SaudiFlagTint2">
+            <p className="font-black text-xl uppercase">Aftab Hussain</p>
+            <p className="font-semibold text-13">Director Gulf Source</p>
+          </div>
         </div>
       </section>
     </div>
