@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [burgerClass, setBurgerClass] = useState("bar unclicked");
@@ -28,24 +28,24 @@ export default function Navbar() {
 
       <ul className={menuClass}>
         <li className="navItem">
-          <Link to="/Products-Services" className="navLink">
+          <NavLink to="/Products-Services" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Products & Services
-          </Link>
+          </NavLink>
         </li>
         <li className="navItem">
-          <Link to="#" className="navLink">
+          <NavLink to="/vision" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Vision
-          </Link>
+          </NavLink>
         </li>
         <li className="navItem">
-          <Link to="#" className="navLink">
+          <NavLink to="/certifications" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Certifications
-          </Link>
+          </NavLink>
         </li>
         <li className="navItem">
-          <Link to="#" className="navLink">
+          <NavLink to="/contact-us" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Contact Us
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </header>

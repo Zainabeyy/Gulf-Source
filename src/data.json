@@ -1,0 +1,123 @@
+{
+  "IndustrialServices": {
+    "blue": [
+      {
+        "img": "service-1-icon",
+        "title": "Plant Maintenance & Turn Around",
+        "detail": "Plants emergency shutdown & breakdown"
+      },
+      {
+        "img": "service-2-icon",
+        "title": "MECHANICAL & PIPELINE INTEGRATION",
+        "detail": "Installation, Testing & Hydrotesting"
+      },
+      {
+        "img": "service-3-icon",
+        "title": "PIPELINE DE-PRESSURIZING",
+        "detail": "Remote smokeless flaring system & decruding"
+      },
+      {
+        "img": "service-4-icon",
+        "title": "VALVES & ACTUATOR SERVICES",
+        "detail": "In-house, jobsite, live-lines & plants"
+      },
+      {
+        "img": "service-5-icon",
+        "title": "INDUSTRIAL ENGINEERED MATERIAL SUPPLIES",
+        "detail": "bulk piping, fittings, valves, E&I"
+      }
+    ],
+    "green": [
+      {
+        "img": "service-6-icon",
+        "title": "FABRICATION OF SPARE PARTS CUSTOMIZED FABRICATION SERVICES",
+        "detail": "In-house & jobsite"
+      },
+      {
+        "img": "service-7-icon",
+        "title": "AUTOMATION & DCS INTEGRATION",
+        "detail": "Supplies, installation, testing & commissioning"
+      },
+      {
+        "img": "service-8-icon",
+        "title": "ENGINEERED EQUIPMENTS & SKIDS SUPPLIES",
+        "detail": "Mechanical & E&I"
+      },
+      {
+        "img": "service-9-icon",
+        "title": "HYDRAULIC & INDUSTRIAL SERVICES / HOSES",
+        "detail": "Supplies, installation & testing"
+      },
+      {
+        "img": "service-10-icon",
+        "title": "TELECOM ,OSP & FOC INTEGRATION",
+        "detail": "Supplies, installation, testing & commissioning"
+      }
+    ]
+  },
+  "IndustrialProducts": {
+    "blue": [
+      {
+        "img": "service-4-icon",
+        "title": "VALVES",
+        "detail": "A wide range of valves for various applications."
+      },
+      {
+        "img": "ph_pipe-thin",
+        "title": "PIPING",
+        "detail": "High-quality fittings for piping systems."
+      },
+      {
+        "img": "product-3-icon",
+        "title": "fitting and flanges",
+        "detail": "Connection components for pipes and tubes."
+      }
+    ],
+    "green": [
+      {
+        "img": "product-4-icon",
+        "title": "STRUCTURAL STEEL",
+        "detail": "Carbon steel, stainless steel, and alloy pipes."
+      },
+      {
+        "img": "telecom-icon",
+        "title": "INSTRUMENTATION & TELECOMMUNICATION",
+        "detail": "Devices for measuring, controlling, and transmitting data."
+      },
+      {
+        "img": "electrical-icon",
+        "title": "ELECTRICAL",
+        "detail": "Electrical components for various applications."
+      }
+    ]
+  },
+  "MaterialSuppliesDivision": {
+    "blue": [
+      {
+        "img": "chat-icon",
+        "title": "Custom Packaging and labeling ",
+        "detail": "GULF SOURCE offers custom packaging /labeling to suit your needs. In house certified hazmat shipper"
+      },
+      {
+        "img": "package-icon",
+        "title": "Consignment Stock",
+        "detail": "GSIS is happy to stock any item(s) you require, so you don’t have to, reducing your overhead and freeing your cash flow"
+      },
+      {
+        "img": "globe-icon",
+        "title": "Sourcing",
+        "detail": "For items we don’t carry, GSIS offers years of sourcing experience to procure your difficult-to-find items, making it easy to get the items you need"
+      },
+      {
+        "img": "map-icon",
+        "title": "Traceability",
+        "detail": "GSIS offers custom packaging /labeling to suit your needs. In house certified hazmat shipper"
+      },
+      {
+        "img": "search-icon",
+        "title": "Usage Forecasting",
+        "detail": "GSIS is happy to stock any item(s) you require, so you don’t have to, reducing your overhead and freeing your cash flow"
+      }
+    ]
+  }
+}

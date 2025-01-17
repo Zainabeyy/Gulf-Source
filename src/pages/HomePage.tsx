@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Stats from "../components/Stats";
 
 export default function HomePage() {
@@ -143,23 +142,17 @@ export default function HomePage() {
 
         {/* logo carousel */}
 
-        <div className="flex flex-nowrap gap-6 w-full">
-          <motion.div
-            initial={{ x: "-15%" }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            className="flex shrink-0 gap-6"
+        <div className="flex flex-nowrap slide gap-6 w-full">
+          <div
+            className="shrink-0 gap-6 flex flex-nowrap animate-slide"
           >
             {companyLogoEl}
-          </motion.div>
-          <motion.div
-            initial={{ x: "-15%" }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            className="flex shrink-0 gap-6"
+          </div>
+          <div
+            className="shrink-0 gap-6 flex flex-nowrap animate-slide"
           >
             {companyLogoEl}
-          </motion.div>
+          </div>
         </div>
       </section>
 

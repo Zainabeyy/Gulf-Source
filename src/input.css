@@ -92,6 +92,10 @@ h2 {
   borderimagesource: "linear-gradient(to left, #2ca8dc, #d0df8a)";
 }
 
+.imgGradient {
+  
+}
+
 @media (min-width: 768px) {
   .menu {
     @apply flex shadow-none m-0 w-auto;
