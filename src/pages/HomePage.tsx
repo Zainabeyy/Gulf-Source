@@ -78,7 +78,7 @@ export default function HomePage() {
         {companyDetails.map((item, index) => {
           return (
             <Link
-              to=""
+              to={`/Products-Services/#${item.image}`}
               key={index}
               className="companyDetailCard group max-w-[18rem] sm:max-w-[19.5rem] 2xl:max-w-[25rem] min-h-[17rem] p-6 bg-no-repeat bg-center bg-cover overflow-hidden flex items-end transition-all duration-1000"
               style={{

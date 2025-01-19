@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply font-Montserrat leading-tight;
+  min-height:100vh;
 }
 section {
   @apply px-9 lg:px-33 2xl:px-52;
@@ -14,6 +18,33 @@ h1 {
 h2 {
   @apply uppercase text-SaudiFlagTint2 font-bold text-base;
 }
+
+
+/* ---- gradient ---- */
+
+.gradient {
+  @apply font-extrabold text-transparent bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 bg-clip-text transition-all duration-500;
+}
+.hover-gradient:hover {
+  @apply gradient;
+}
+.product-service-nav-item:hover p.title{
+  @apply gradient;
+}
+
+.gradient-line {
+  @apply bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 h-[2px] my-2 2xl:my-4;
+}
+
+.gradient-border {
+  @apply text-13 font-bold  max-w-48  transition-all h-[2.75rem] border-[1px] hover:border-[3px] px-8 py-[0.625rem];
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #2ca8dc, #d0df8a);
+}
+
+
+/* ---- Nav hamburger Menu ---- */
+
 .bar {
   @apply w-7 h-[2px] bg-white block mb-1;
 }
@@ -39,8 +70,8 @@ h2 {
 .navItem {
   @apply p-2;
 }
-.bgBlur {
-  @apply bg-MarianShade1 bg-opacity-55 backdrop-blur-md;
+.navLink {
+  @apply transition-all duration-300 hover-gradient;
 }
 @keyframes appears {
   from {
@@ -55,46 +86,40 @@ h2 {
 .menu.visible {
   animation: appears 0.5s;
 }
-
-/* text gradient on hover  */
-
-.gradient {
-  @apply font-extrabold text-transparent bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 bg-clip-text transition-all duration-700;
-}
-.hover-gradient:hover {
-  @apply gradient;
-}
-.navLink {
-  @apply transition-all duration-300 hover-gradient;
+.bgBlur {
+  @apply bg-MarianShade1 bg-opacity-55 backdrop-blur-md;
 }
 
-.gradient-line {
-  @apply bg-gradient-to-r from-PrimaryGradientClr1 to-PrimaryGradientClr2 h-[2px] my-2 2xl:my-4;
-}
+
+/* ---- hero section backgroundImg ---- */
+
 .backgroundImg {
   background: url(/homePage/hero-bg-home.webp);
   @apply bg-no-repeat bg-center bg-cover h-full min-h-[500px] 2xl:h-[600px];
 }
 
-.gradient-border {
-  @apply text-13 font-bold  max-w-48  transition-all h-[2.75rem] border-[1px] hover:border-[3px] px-8 py-[0.625rem];
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #2ca8dc, #d0df8a);
-}
 
 .companyDetailCard:nth-child(3) h2 {
   @apply -translate-y-6 group-hover:translate-y-0;
 }
 
-.borderBottom-gradient {
-  @apply text-13 font-bold max-w-48 transition-all h-[2.75rem] px-8 py-[0.625rem] border-b-[3px] hover:border-b-[6px];
-  borderimageslice: 1;
-  borderimagesource: "linear-gradient(to left, #2ca8dc, #d0df8a)";
+
+.industrial-card .shadow-div{
+  @apply hidden;
 }
 
-.imgGradient {
-  
+
+
+@media (min-width: 451px) {
+  .industrial-card:nth-child(2n+1) .shadow-div{
+    @apply hidden;
+  }
+  .industrial-card:not(:nth-child(2n+1)) .shadow-div {
+    @apply block;
+  }
 }
+
+
 
 @media (min-width: 768px) {
   .menu {
@@ -102,5 +127,22 @@ h2 {
   }
   .navItem {
     @apply text-MarianTint4 px-4;
+  }
+  .industrial-card:nth-child(3n+1) .shadow-div{
+    @apply hidden;
+  }
+  .industrial-card:not(:nth-child(3n+1)) .shadow-div {
+    @apply block;
+  }
+}
+
+
+
+@media (min-width: 1280px) {
+  .industrial-card:nth-child(5n+1) .shadow-div{
+    @apply hidden;
+  }
+  .industrial-card:not(:nth-child(5n+1)) .shadow-div {
+    @apply block;
   }
 }

@@ -1,32 +1,72 @@
-import { Link } from "react-router-dom";
 import IndustrialCard from "../components/IndustrialCard";
-import data from "../data.json";
-
+import data from "../ProductServiceData.json";
+import { useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 export default function ProductsServices() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      navigate(
+        {
+          pathname: location.pathname,
+          search: location.search,
+        },
+        { replace: true }
+      );
+    }
+  }, [location, navigate]);
+
   const InsideLinkBar = [
     {
       img: "grommet-icons_services",
-      title: "Industrial Products",
-    },
-    {
-      img: "material-symbols_valve",
+      hoverImg: "grommet-icons-gradient",
       title: "Industrial Services",
     },
     {
+      img: "material-symbols_valve",
+      hoverImg: "material-valve-gradient",
+      title: "Industrial Products",
+    },
+    {
       img: "tabler_package",
+      hoverImg: "tabler_package-gradient",
       title: "Materials Supplies Division",
     },
   ];
   const InsideLinkBarEl = InsideLinkBar.map((item, index) => {
+    const sectionId = item.title.replace(/\s+/g, "-");
     return (
-      <li className="hover-gradient hover:font-bold group" key={index}>
-        <img
-          src={`/Products-Services/${item.img}.svg`}
-          alt={item.title}
-          className="inline mr-2"
-        />
-        <Link to="#">{item.title}</Link>
-        <div className="gradient-line my-0 2xl:my-0 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+      <li
+        className="hover:font-bold group product-service-nav-item"
+        key={index}
+      >
+        <a href={`#${sectionId}`}>
+          <div className="flex items-center">
+            <div className="relative">
+              <img
+                src={`/Products-Services/Nav/${item.hoverImg}.svg`}
+                alt={item.img}
+                className="inline mr-2 absolute  opacity-0 transition-all duration-500 group-hover:opacity-100"
+              />
+              <img
+                src={`/Products-Services/Nav/${item.img}.svg`}
+                alt={item.img}
+                className="inline mr-2 ransition-all duration-500 group-hover:opacity-0"
+              />
+            </div>
+            <p className="title">{item.title}</p>
+          </div>
+          <div
+            style={{ margin: "0rem" }}
+            className="gradient-line opacity-0 group-hover:opacity-100 transition-all duration-500"
+          ></div>
+        </a>
       </li>
     );
   });
@@ -60,7 +100,7 @@ export default function ProductsServices() {
         </div>
       </section>
 
-      <section className="pt-24">
+      <section className="pt-24" id="Industrial-Services">
         <div className="w-fit">
           <h2 className="gradient font-extrabold text-3xl">
             Industrial Services
@@ -76,22 +116,27 @@ export default function ProductsServices() {
           down-time.
         </p>
         <div className="mt-14">
-          <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-7 mb-7">
+          <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-7 mb-7 industrial-card">
             {data.IndustrialServices.blue.map((item, index) => {
               const bgColor = bgBlueColors[index % bgBlueColors.length];
+
               const textColor =
                 bgColor === bgBlueColors[bgBlueColors.length - 1] ||
                 bgColor === bgBlueColors[bgBlueColors.length - 2]
                   ? "#D5D9E3"
                   : "#25325E";
+              const productServiceId = encodeURIComponent(
+                item.title.replace(/\s+/g, "")
+              );
               return (
-                <IndustrialCard
-                  item={item}
-                  key={index}
-                  bgImgClr="#25325E"
-                  bgClr={bgColor}
-                  textColor={textColor}
-                />
+                <Link to={`/${productServiceId}`} key={index}>
+                  <IndustrialCard
+                    item={item}
+                    bgImgClr="#25325E"
+                    bgClr={bgColor}
+                    textColor={textColor}
+                  />
+                </Link>
               );
             })}
           </div>
@@ -103,84 +148,104 @@ export default function ProductsServices() {
                 bgColor === bgGreenColors[bgGreenColors.length - 2]
                   ? "#D0DFD6"
                   : "#092514";
+              const productServiceId = encodeURIComponent(
+                item.title.replace(/\s+/g, "")
+              );
               return (
-                <IndustrialCard
-                  item={item}
-                  key={index}
-                  bgImgClr="#124A27"
-                  bgClr={bgColor}
-                  textColor={textColor}
-                />
+                <Link to={`/${productServiceId}`} key={index}>
+                  <IndustrialCard
+                    item={item}
+                    
+                    bgImgClr="#124A27"
+                    bgClr={bgColor}
+                    textColor={textColor}
+                  />
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
-      <section className="pt-16">
+      <section className="pt-16" id="Industrial-Products">
         <div className="w-fit">
           <h2 className="gradient font-extrabold text-3xl">
-          Industrial Products
+            Industrial Products
           </h2>
           <div className="gradient-line"></div>
         </div>
         <p className="text-MarianShade1 leading-[175%]">
-        We offer a diverse range of high-quality industrial products, including valves, fittings, piping, and instrumentation.
+          We offer a diverse range of high-quality industrial products,
+          including valves, fittings, piping, and instrumentation.
         </p>
         <div className="mt-14">
           <div className="grid xs:grid-cols-2 md:grid-cols-3 gap-y-7 mb-7">
             {data.IndustrialProducts.blue.map((item, index) => {
               const slicedBgBlueColors = bgBlueColors.slice(1);
-              const bgColor = slicedBgBlueColors[index % slicedBgBlueColors.length];
+              const bgColor =
+                slicedBgBlueColors[index % slicedBgBlueColors.length];
               const textColor =
                 bgColor === bgBlueColors[bgBlueColors.length - 1] ||
                 bgColor === bgBlueColors[bgBlueColors.length - 2]
                   ? "#D5D9E3"
                   : "#25325E";
+              const productServiceId = encodeURIComponent(
+                item.title.replace(/\s+/g, "")
+              );
               return (
-                <IndustrialCard
-                  item={item}
-                  key={index}
-                  bgImgClr="#25325E"
-                  bgClr={bgColor}
-                  textColor={textColor}
-                />
+                <Link to={`/${productServiceId}`} key={index}>
+                  <IndustrialCard
+                    item={item}
+                    
+                    bgImgClr="#25325E"
+                    bgClr={bgColor}
+                    textColor={textColor}
+                  />
+                </Link>
               );
             })}
           </div>
           <div className="grid xs:grid-cols-2 md:grid-cols-3 gap-y-7 mb-7">
             {data.IndustrialProducts.green.map((item, index) => {
               const slicedBgGreenColors = bgGreenColors.slice(1);
-              const bgColor = slicedBgGreenColors[index % slicedBgGreenColors.length];
+              const bgColor =
+                slicedBgGreenColors[index % slicedBgGreenColors.length];
+
               const textColor =
                 bgColor === bgGreenColors[bgGreenColors.length - 1] ||
                 bgColor === bgGreenColors[bgGreenColors.length - 2]
                   ? "#D0DFD6"
                   : "#092514";
+              const productServiceId = encodeURIComponent(
+                item.title.replace(/\s+/g, "")
+              );
               return (
-                <IndustrialCard
-                  item={item}
-                  key={index}
-                  bgImgClr="#124A27"
-                  bgClr={bgColor}
-                  textColor={textColor}
-                />
+                <Link to={`/${productServiceId}`} key={index}>
+                  <IndustrialCard
+                    item={item}
+                    
+                    bgImgClr="#124A27"
+                    bgClr={bgColor}
+                    textColor={textColor}
+                  />
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
-      <section className="pt-16">
+      <section className="pt-16" id="Materials-Supplies-Division">
         <div className="w-fit">
           <h2 className="gradient font-extrabold text-3xl">
-          Material Supplies Division
+            Material Supplies Division
           </h2>
           <div className="gradient-line"></div>
         </div>
         <p className="text-MarianShade1 leading-[175%]">
-        Our Materials Supplies Division provides comprehensive solutions, including custom packaging, sourcing, and traceability.
+          Our Materials Supplies Division provides comprehensive solutions,
+          including custom packaging, sourcing, and traceability.
         </p>
         <div className="my-14">
-        <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-7 mb-7">
+          <div className="grid xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-y-7 mb-7">
             {data.MaterialSuppliesDivision.blue.map((item, index) => {
               const bgColor = bgBlueColors[index % bgBlueColors.length];
               const textColor =

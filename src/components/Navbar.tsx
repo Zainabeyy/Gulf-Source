@@ -28,22 +28,22 @@ export default function Navbar() {
 
       <ul className={menuClass}>
         <li className="navItem">
-          <NavLink to="/Products-Services" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
+          <NavLink to="Products-Services" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Products & Services
           </NavLink>
         </li>
         <li className="navItem">
-          <NavLink to="/vision" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
+          <NavLink to="vision" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Vision
           </NavLink>
         </li>
         <li className="navItem">
-          <NavLink to="/certifications" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
+          <NavLink to="certifications" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Certifications
           </NavLink>
         </li>
         <li className="navItem">
-          <NavLink to="/contact-us" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
+          <NavLink to="contact-us" className={({isActive})=>isActive ? "navLink gradient" : "navLink"}>
             Contact Us
           </NavLink>
         </li>

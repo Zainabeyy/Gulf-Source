@@ -1,0 +1,640 @@
+[
+  {
+    "id": 1,
+    "img": "Plant-Maintenance",
+    "title": "Plant Maintenance & Turn Around",
+    "detail": "No matter where your plant is located, We’re ready to help return your system to service in the fastest time possible with the support of our Overseas Principal and Saudi Aramco Approved Manufacturer Zeeco, the world leader in the design and manufacture of advanced combustion and environmental solutions. Our products are designed to reduce emissions, optimize processing industries, and maximize operating efficiency while meeting all global environmental compliance requirements.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "24-hour technical support by phone or email",
+          "Maintenance programs",
+          "Emergency field service",
+          "Installation and commissioning services",
+          "Rental equipment available",
+          "Onsite operator training",
+          "Overnight shipping of parts or ancillary products"
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Preventive Maintenance",
+        "detail": "Regular inspections and maintenance to prevent equipment failures."
+      },
+      {
+        "title": "Project Management",
+        "detail": "Expert project management to ensure smooth execution."
+      },
+      {
+        "title": "Predictive Maintenance",
+        "detail": "Using advanced technologies to predict potential failures."
+      },
+      {
+        "title": "Shutdown and Turnaround Services",
+        "detail": "Efficient and safe shutdown and restart of plant operations."
+      },
+      {
+        "title": "Corrective Maintenance",
+        "detail": "Prompt repairs to minimize downtime."
+      },
+      {
+        "title": "Emergency Response",
+        "detail": "Rapid response to equipment failures and emergencies."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "img": "Mechanical-Pipeline",
+    "title": "Mechanical & Pipeline Integration",
+    "detail": "We understand new pipeline commissioning involves hundreds of steps from start to finish, and a successful project requires coordinated efforts from experienced professionals. Our expert pipeline service technicians handle all aspects of combustion and work alongside the commissioning team to execute each step of the project.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Pre-commissioning of new pipelines",
+          "Commissioning of pipelines",
+          "Pipeline Geometry Inspection",
+          "Inline inspection /Base Line survey",
+          "De-commissioning of pipelines."
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Mechanical Installation",
+        "detail": "Installation of various mechanical equipment, including pumps, compressors, turbines, and heat exchangers."
+      },
+      {
+        "title": "Pipeline Installation and Repair",
+        "detail": "Installation, repair, and maintenance of pipelines, including piping systems, valves, and fittings."
+      },
+      {
+        "title": "Field Services",
+        "detail": "On-site services, including troubleshooting, repair, and maintenance."
+      },
+      {
+        "title": "Project Management",
+        "detail": "Expert project management to ensure projects are completed on time and within budget."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "img": "Pipeline-De-pressurizing",
+    "title": "Pipeline De-pressurizing",
+    "detail": "GULF SOURCE has successfully completed numerous pipeline de-pressurizing projects for Saudi Aramco, utilizing advanced remote smokeless flaring systems. We're currently supporting a major de-pressurizing operation, ensuring compliance with strict safety and environmental standards. As a trusted partner of Saudi Aramco, we offer customized solutions to minimize environmental impact and enhance safety. Our advanced technology and remote operation capabilities reduce risks and improve efficiency. We're committed to continuous improvement and meeting the evolving needs of our clients.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Temporary (Rental) Flare",
+          "Mobile (Trailer-Mounted) Flare Stack",
+          "Highly-Reactive Volatile Organic Compounds (HRVOC) Monitoring Trailer",
+          "Open or Enclosed Flare",
+          "Pipeline Recompression Units",
+          "Noise and Radiation Level Surveys and Analysis"
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Remote Smokeless Flaring",
+        "detail": "Our advanced remote smokeless flaring systems minimize environmental impact by eliminating smoke and harmful emissions."
+      },
+      {
+        "title": "Decruding Solutions",
+        "detail": "Our decruding solutions remove contaminants from pipelines, ensuring optimal performance and safety."
+      },
+      {
+        "title": "Experienced Team",
+        "detail": "Our skilled technicians have a proven track record in pipeline de-pressurizing."
+      },
+      {
+        "title": "Safety and Compliance",
+        "detail": "We adhere to strict safety standards and environmental regulations."
+      },
+      {
+        "title": "Customized Solutions",
+        "detail": "We tailor our services to meet your specific needs."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "img": "Valves-Actuator-Services",
+    "title": "Valves & Actuator Services",
+    "detail": "GULF SOURCE is having Saudi Aramco & MSSD approval valves and actuator services shop to keep serving Saudi Aramco, SWCC & EPC contractors for Valves and Actuators Services at shop or as well as on jobsite.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Valve Repairing, Overhauling, Hydrotesting",
+          "Actuator repairing, functioning, installation & Testing",
+          "On-site Valve Installation, Testing and functionality at Jobsite and On-line.",
+          "Field Services & Mobile Work-shop."
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Valve Repair and Overhauling",
+        "detail": "Expert repair and overhaul of valves, including ball valves, gate valves, and control valves."
+      },
+      {
+        "title": "Actuator Repair and Functioning",
+        "detail": "Precision repair and calibration of actuators to ensure optimal performance."
+      },
+      {
+        "title": "Hydrotesting",
+        "detail": "Rigorous testing to ensure valve integrity and safety."
+      },
+      {
+        "title": "Field Services",
+        "detail": "On-site services, including troubleshooting, repair, and maintenance."
+      },
+      {
+        "title": "Mobile Workshop",
+        "detail": "Convenient on-site services for quick and efficient repairs."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "img": "Industrial-Material-Supplies",
+    "title": "Industrial Engineered Material Supplies",
+    "detail": "Gulf Source Industrial Services offers a comprehensive range of industrial engineered material supplies to meet the diverse needs of your projects. Our experienced team sources and supplies high-quality materials from trusted suppliers, ensuring optimal performance and reliability.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Custom Packaging and labeling ",
+          "Consignment Stock",
+          "Sourcing",
+          "Traceability",
+          "Usage Forecasting"
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Custom Packaging and Labeling",
+        "detail": "Tailored packaging solutions to meet your specific requirements."
+      },
+      {
+        "title": "Consignment Stock",
+        "detail": "Convenient inventory management and supply chain solutions."
+      },
+      {
+        "title": "Sourcing and Traceability",
+        "detail": "Reliable sourcing and tracking of materials."
+      },
+      {
+        "title": "Usage Forecasting",
+        "detail": "Accurate forecasting to optimize inventory levels."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "img": "Fabrication-Of-Spare-Parts",
+    "title": "Fabrication Of Spare Parts Customized Fabrication Services",
+    "detail": "Gulf Source Industrial Services offers a comprehensive range of fabrication services, including the manufacturing of spare parts and custom fabrication solutions. Our skilled team utilizes state-of-the-art equipment and techniques to deliver high-quality products that meet the most demanding standards.",
+    "WhatYouGet": [
+      {
+        "title": "Spare Part Fabrication",
+        "detail": "Precision manufacturing of replacement parts for various industrial equipment."
+      },
+      {
+        "title": "Custom Fabrication",
+        "detail": "Tailored fabrication solutions to meet your specific needs."
+      },
+      {
+        "title": "Material Sourcing and Procurement",
+        "detail": "Sourcing of high-quality materials to ensure optimal performance."
+      },
+      {
+        "title": "Quality Assurance and Testing",
+        "detail": "Rigorous testing to ensure product quality and reliability."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "img": "Automation-Dcs-Integration",
+    "title": "Automation & Dcs Integration",
+    "detail": "GULF SOURCE, and our Automation & Process Control Team has been associated with top 10 System Integrators worldwide, Our business associate and overseas principal is a global engineering firm specializing in Sustainable Automation and Control Turnkey Solutions since 1984.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Process Automation",
+          "Batch Engineering MES",
+          "Design Implementations & Custom Software",
+          "Data Integration Support",
+          "Electrical Services Training",
+          "Regulatory Validation",
+          "Commissioning",
+          "Product Management and Hardware",
+          "Project Design",
+          "Energy Management & Optimization Solutions (EMS) Turnkey Systems",
+          "Complex Process Multi-Platform Plant",
+          "Information Management Systems (PIMS) Performance Management SCADA DCS and PLM, HVAC and BMS",
+          "Emergency Field Service on Site Support",
+          "Emergency Managed Care 24/7/365 Technical Support",
+          "Facility Management",
+          "Staffing Solutions",
+          "Instrument Calibration",
+          "Field Commissioning",
+          "Long Term Training Work",
+          "Order Site Management",
+          "Management Technical Mark-Com"
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "System Integration",
+        "detail": "Seamless integration of various automation components for optimal performance."
+      },
+      {
+        "title": "Process Automation",
+        "detail": "Automated control of industrial processes to improve efficiency and reduce costs."
+      },
+      {
+        "title": "Batch Control",
+        "detail": "Precise control of batch processes for consistent product quality."
+      },
+      {
+        "title": "SCADA Systems",
+        "detail": "Real-time monitoring and control of industrial processes."
+      },
+      {
+        "title": "PLC Programming",
+        "detail": "Advanced PLC programming for flexible and reliable automation solutions."
+      },
+      {
+        "title": "Field Instrumentation",
+        "detail": "Installation and calibration of field instruments for accurate data collection."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "img": "Engineered-Equipments",
+    "title": "Engineered Equipments & Skids Supplies",
+    "detail": "Gulf Source Industrial Services offers a comprehensive range of engineered equipment and skids to meet the diverse needs of your industrial operations. Our experienced team designs, fabricates, and supplies custom solutions tailored to your specific requirements.",
+    "WhatYouGet": [
+      {
+        "title": "Skid-Mounted Systems",
+        "detail": "Compact and modular systems for efficient installation and operation."
+      },
+      {
+        "title": "Custom Equipment Fabrication",
+        "detail": "Precision manufacturing of custom equipment components."
+      },
+      {
+        "title": "Material Sourcing and Procurement",
+        "detail": "Sourcing of high-quality materials from trusted suppliers."
+      },
+      {
+        "title": "Quality Assurance and Testing",
+        "detail": "Rigorous testing to ensure product quality and reliability."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "img": "Hydraulic-Industrial-Services-Hoses",
+    "title": "Hydraulic & Industrial Services / Hoses",
+    "detail": "Gulf Source Industrial Services provides a comprehensive range of hydraulic and industrial services, including hose supply, installation, and testing. Our experienced team ensures the reliability and efficiency of your hydraulic systems.",
+    "ListData": [
+      {
+        "name": "Services Include",
+        "ServicesInclude": [
+          "Complete Valve Modification",
+          "Actuator Modification for new and existing valves - Actuator Reconditioning",
+          "Actuator set-up",
+          "Calibration",
+          "Stroking and Hydraulic flushing services"
+        ]
+      }
+    ],
+    "WhatYouGet": [
+      {
+        "title": "Hose Supply",
+        "detail": "A wide range of high-quality hoses for various applications."
+      },
+      {
+        "title": "Hose Installation",
+        "detail": "Expert installation of hoses to meet industry standards."
+      },
+      {
+        "title": "Hose Testing and Certification",
+        "detail": "Rigorous testing to ensure hose integrity and safety."
+      },
+      {
+        "title": "Hydraulic System Repair and Maintenance",
+        "detail": "Expert repair and maintenance of hydraulic systems."
+      },
+      {
+        "title": "Hydraulic Fluid Analysis and Filtration",
+        "detail": "Advanced fluid analysis and filtration services."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "img": "Telecom",
+    "title": "Telecom ,osp & Foc Integration",
+    "detail": "Gulf Source Industrial Services provides comprehensive telecom, outside plant (OSP), and fiber optic cable (FOC) integration solutions. Our experienced team designs, installs, and maintains reliable telecommunications networks to meet your specific needs.",
+    "WhatYouGet": [
+      {
+        "title": "Fiber Optic Cable Installation and Maintenance",
+        "detail": "Expert installation and maintenance of fiber optic cables."
+      },
+      {
+        "title": "Outside Plant Engineering and Design",
+        "detail": "Design and engineering of efficient and reliable OSP networks."
+      },
+      {
+        "title": "Telecommunication Network Integration",
+        "detail": "Seamless integration of various telecommunication systems."
+      },
+      {
+        "title": "Network Testing and Troubleshooting",
+        "detail": "Advanced testing and troubleshooting techniques to ensure optimal network performance."
+      },
+      {
+        "title": "Network Security and Access Control",
+        "detail": "Robust security measures to protect your network infrastructure."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "img": "Valves",
+    "title": "Valves",
+    "detail": "GULF SOURCE represents AFFCO Flow Control Europe Valves in Saudi Arabia. AFFCO, a renowned valve manufacturer with 60+ years of experience, produces high-quality valves in various materials and sizes, including large butterfly, ball, and plug valves. AFFCO is approved by major organizations in Saudi Arabia and has successfully provided solutions for critical projects like the SWCC desalination plant. Partnering with AFFCO, GULF SOURCE delivers cutting-edge valve solutions to the Saudi market, ensuring optimal performance, reliability, and environmental sustainability.",
+    "manufacturerrs":["ivm-saudi","omb-italy","lt-india","kitz-japan"],
+    "ListData": [
+      
+      {
+        "name": "Products",
+        "Products": [
+          "Gate, Globe & Check Valves",
+          "Trunnion & Floating Ball Valves",
+          "Wafer Checks",
+          "Butterfly Valves",
+          "Plug Valves",
+          "Needle Valves",
+          "Valve Automation – Pneumatic & Electric Specialty Valve Products",
+          "Piston Valves",
+          "Strainers",
+          "Chainwheel Operators"
+        ]
+      },
+      {
+        "name": "materials",
+        "materials": [
+          "Carbon Steel",
+          "Forged Steel",
+          "Cast Steel",
+          "Stainless & Nickel Alloys Bronze",
+          "Cast Iron",
+          "Chrome Moly"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "img": "Piping",
+    "title": "Piping",
+    "detail": "GULF SOURCE, carries a complete line of carbon, stainless, and alloy pipe. It has one of the most comprehensive inventories in the industry. We consistently outperform our competitors in pricing on both material and coating applications. BKAY can provide pipe and coating to any specification. Our worldwide mill relationships make us a prominent leader in the distribution industry.",
+    "manufacturerrs":["sandvik-sweden","sanyo-japan","protorch-Netherlands","tubacex-Spain"],
+    "ListData": [
+      {
+        "name": "Carbon Steel",
+        "CarbonSteel": [
+          "Seamless",
+          "ERW (Electric Resistance Weld)",
+          "DSAW (Double Submerged Arc Weld)",
+          "CW (Continuous Weld)",
+          "Tubing",
+          "Low Temp"
+        ]
+      },
+      {
+        "name":"Resin-Based",
+        "Resin-Based": [
+          "Fiberglass",
+          "Polyethelyne"
+        ]
+      },{
+        "name": "Chrome Moly",
+        "ChromeMoly": [
+          "Specification SA335 Grades P11 | P22| P5 | P9"
+        ]
+      },{
+        "name": "Stainless Steel",
+        "StainlessSteel": [
+          "Welded",
+          "Seamless",
+          "Instrument Tube",
+          "Specifications A312 | SA312 | A269 | A790 Grades 304/L | 316/L | Duplex UNS32205"
+        ]
+      },{
+        "name": "Corrugated Metal Pipe",
+        "CorrugatedMetalPipe": [
+          "IGalvanlzed"
+        ]
+      },{
+        "name": "End Finishes",
+        "EndFinishes": [
+          "Plain End Beveled",
+          "T&C (Threaded and Coupled)"
+        ]
+      },{
+        "name": "Coatings",
+        "Coatings": [
+          "Bare",
+          "Lacquered (MIll Coat)",
+          "Fusion Bond Epoxy",
+          "Synergy",
+          "Powercrete & Lilly 2040",
+          "TGF-3 (Coal Tar - Coated & Wrapped)",
+          "X-Tru Coat (Extruded Polyethylene)",
+          "Galvanlzed",
+          "CZ-11 (Zinc Primer)",
+          "Paint"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "img": "fitting-and-flanges",
+    "title": "fitting and flanges",
+    "detail": "GULF SOURCE, is your one-stop-shop for all your carbon, stainless, and alloy fitting and flange needs. We carry a full line of commodity type items both “approved” and “generic”. MTR’s are available on all material. It is our mission to make available those items that you need, when you need them.",
+    "manufacturerrs":["schulz-Germany","erne-austria","protorch-Netherlands","viraj-india","ulma-spain","kofco-korea","metalfar-italy"],
+    "ListData": [
+      {
+        "name": "products",
+        "products": [
+          "½” TO 48” – 150# TO 2500# RF and RTJ faced available in all schedules ASTM A350-LF2",
+          "ASTM A694-F52 through F70 high yield product",
+          "CSAZ245.12 CAT II GR 359 (product to Canadian standards)",
+          "ASTM A105, ASTM A105N",
+          "Stainless: 304, 304L, 316, 316L, 317L, 321H",
+          "Duplex",
+          "Alloy 20",
+          "Chrome: F5, F9, F11, F22",
+          "NACE Product can be supplied on request to MR 01-75",
+          "Paddle Blinds and Spacer Rings"
+        ]
+      },
+      {
+        "name":"Materials",
+        "description":"GSIS maintains an extensive inventory of fittings from ½” to 48”in all schedules in the following grades of material:",
+        "Materials": [
+          "ASTM A234 WPB",
+          "ASTM A860 WPHY60",
+          "ASTM A234 WPC",
+          "ASTM A860 WPHY65",
+          "ASTM A420 WPL6",
+          "ASTM A860 WPHY70",
+          "ASTM A860 WPHY52",
+          "CSAZ235.11 CAT II GR359",
+          "All to NACE MR-01-75",
+          "Stainless: 304, 304L, 316, 316L, 317L, 321H Duplex",
+          "Alloy 20",
+          "Chrome: F5, F9, F11, F22"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "img": "Structural Steel",
+    "title": "Structural Steel",
+    "detail": "At GSIS, we stock, process, and deliver hot-rolled angles, flats, channels, structural beams, sheet, plate, expanded metal, bar grating, pipe, tubing, rebar, wire mesh, as well as hot-rolled and cold-rolled bars. With the increasing diverse and specialized needs of our customers, we offer processes that include plasma and oxyfuel burning, plate shearing, and sawing to length. ",
+    "ListData": [
+      {
+        "name": "products",
+        "products": [
+          "Angles",
+          "Beams",
+          "Channels",
+          "Expanded Metal", 
+          "Flat bars",
+          "Plate",
+          "Bar Grating",
+          "Metal building components Perforated metal",
+          "Pipe",  
+          "Round and square bar",
+          "Sheets",
+          "Strip",
+          "Round, square, and rectangular tubing Mill platesPlugs and Receptacles",
+          "Power Supplies",
+          "Push Buttons",
+          "Raceways"
+        ]
+      },
+      {
+        "name":"Materials",
+        "description":"GSIS maintains an extensive inventory of fittings from ½” to 48”in all schedules in the following grades of material:",
+        "Materials": [
+          "ASTM A-36 / ASTM A-36 ABS / ABS Grade A API-2H50 / EH/DH 36 SA537 CLASS I",
+          "ASTM A-514 B Structural Quality",
+          "ASTM A-588 Grade A/B",
+          "AR-400 MIN 360HB",
+          "ASTM A-572 GR50",
+          "ASME SA-516 GR70 As Rolled",
+          "ASME SA-516 GR70 Normalized with Charpy’s"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "img": "Telecom",
+    "title": "Instrumentation & Telecommunication",
+    "detail": "GULF SOURCE, consistently meets or exceeds all of your Instrumentation, Control and Telecommunication / Fiber-Optic requirement. We stock huge inventory of these Instrumentation, Control and Telecommunication systems which you need to complete your project.",
+    "ListData": [
+      {
+        "name": "Instrumentation",
+        "Instrumentation": [
+          "Remote Terminal Units RTU’s",
+          "Distribution Control System DCS",
+          "Corrosion Management System CMS",
+          "Leak Detection System LDS",
+          "Gas Detection Systemss",
+          "Pressure & Flow Instruments",
+          "Instrument & Control Cables",
+          "Instrument Junction Boxes",
+          "Scraper passage Indicators",
+          "Instrument Bulk Material"
+        ]
+      },
+      {
+        "name":"telecommunication",
+        "telecommunication": [
+          "Telecommunication Cables",
+          "Fiber Optic Cables.",
+          "Data Communication",
+          "OSP Communications",
+          "SCS Communications",
+          "Telecommunication Bulks",
+          "Data and Communication Distribution Panels",
+          "Scada System"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "img": "Electrical",
+    "title": "Electrical",
+    "detail": "Over the years, GULF SOURCE, consistently meets or exceeds all of your electrical needs. If you need conduit, limit switches, relays, or complete wire management solutions, think GSIS first. We stock power supplies, fuses, transformers and nearly every other electrical component you need to complete your project.",
+    "ListData": [
+      {
+        "name": "products",
+        "products": [
+          "Circuit Breakers",
+          "Conduit",
+          "Conduit Fittings",
+          "Conduit Mounting",
+          "Counters and Hour Meters",
+          "Data and Communication Distribution Panels",
+          "Electrical Boxes",
+          "Enclosures",
+          "Encoders",
+          "Extension Cords and Outlet Strips Fuses",
+          "Ground Fault Protection",
+          "PLC’s",
+          "Plugs and Receptacles",
+          "Power Supplies",
+          "Push Buttons",
+          "Raceways",
+          "Relays",
+          "Safety Switches",
+          "Solenoids",
+          "Starters and Contactors Strain Relief",
+          "Switches",
+          "Temperature Controls Terminal Blocks",
+          "Timers",
+          "Transformers",
+          "Voltage Regulation",
+          "Wire Connectors",
+          "Wire Management",
+          "Wire and Cable",
+          "Wireways",
+          "Transfer Switches Automatic Transfer Switches Manual"
+        ]
+      }
+    ]
+  }
+]

@@ -8,49 +8,49 @@
       },
       {
         "img": "service-2-icon",
-        "title": "MECHANICAL & PIPELINE INTEGRATION",
+        "title": "Mechanical & Pipeline Integration",
         "detail": "Installation, Testing & Hydrotesting"
       },
       {
         "img": "service-3-icon",
-        "title": "PIPELINE DE-PRESSURIZING",
+        "title": "Pipeline De-pressurizing",
         "detail": "Remote smokeless flaring system & decruding"
       },
       {
         "img": "service-4-icon",
-        "title": "VALVES & ACTUATOR SERVICES",
+        "title": "Valves & Actuator Services",
         "detail": "In-house, jobsite, live-lines & plants"
       },
       {
         "img": "service-5-icon",
-        "title": "INDUSTRIAL ENGINEERED MATERIAL SUPPLIES",
+        "title": "Industrial Engineered Material Supplies",
         "detail": "bulk piping, fittings, valves, E&I"
       }
     ],
     "green": [
       {
         "img": "service-6-icon",
-        "title": "FABRICATION OF SPARE PARTS CUSTOMIZED FABRICATION SERVICES",
+        "title": "Fabrication Of Spare Parts Customized Fabrication Services",
         "detail": "In-house & jobsite"
       },
       {
         "img": "service-7-icon",
-        "title": "AUTOMATION & DCS INTEGRATION",
+        "title": "Automation & Dcs Integration",
         "detail": "Supplies, installation, testing & commissioning"
       },
       {
         "img": "service-8-icon",
-        "title": "ENGINEERED EQUIPMENTS & SKIDS SUPPLIES",
+        "title": "Engineered Equipments & Skids Supplies",
         "detail": "Mechanical & E&I"
       },
       {
         "img": "service-9-icon",
-        "title": "HYDRAULIC & INDUSTRIAL SERVICES / HOSES",
+        "title": "Hydraulic & Industrial Services / Hoses",
         "detail": "Supplies, installation & testing"
       },
       {
         "img": "service-10-icon",
-        "title": "TELECOM ,OSP & FOC INTEGRATION",
+        "title": "Telecom ,osp & Foc Integration",
         "detail": "Supplies, installation, testing & commissioning"
       }
     ]
@@ -59,12 +59,12 @@
     "blue": [
       {
         "img": "service-4-icon",
-        "title": "VALVES",
+        "title": "Valves",
         "detail": "A wide range of valves for various applications."
       },
       {
         "img": "ph_pipe-thin",
-        "title": "PIPING",
+        "title": "Piping",
         "detail": "High-quality fittings for piping systems."
       },
       {
@@ -76,17 +76,17 @@
     "green": [
       {
         "img": "product-4-icon",
-        "title": "STRUCTURAL STEEL",
+        "title": "Structural Steel",
         "detail": "Carbon steel, stainless steel, and alloy pipes."
       },
       {
         "img": "telecom-icon",
-        "title": "INSTRUMENTATION & TELECOMMUNICATION",
+        "title": "Instrumentation & Telecommunication",
         "detail": "Devices for measuring, controlling, and transmitting data."
       },
       {
         "img": "electrical-icon",
-        "title": "ELECTRICAL",
+        "title": "Electrical",
         "detail": "Electrical components for various applications."
       }
     ]

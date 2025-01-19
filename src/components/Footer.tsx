@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <section className="bg-MarianShade4 text-13 text-PictonTint4 py-8">
-      {/* <div className="flex flex-col sm:flex-row items-start justify-between gap-6 sm:gap-0"> */}
       <div className="grid grid-cols-1 gap-6 xs:grid-cols-2 md:grid-cols-3">
         <img src="/Logo.svg" alt="logo" className="mb-4 sm:mb-0 xs:col-span-2 md:col-span-1"/>
         <div className="flex flex-col gap-3">
