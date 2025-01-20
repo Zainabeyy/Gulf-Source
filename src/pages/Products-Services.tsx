@@ -129,7 +129,7 @@ export default function ProductsServices() {
                 item.title.replace(/\s+/g, "")
               );
               return (
-                <Link to={`Products-Services/${productServiceId}`} key={index}>
+                <Link to={`/Products-Services/${productServiceId}`} key={index}>
                   <IndustrialCard
                     item={item}
                     bgImgClr="#25325E"
@@ -152,7 +152,7 @@ export default function ProductsServices() {
                 item.title.replace(/\s+/g, "")
               );
               return (
-                <Link to={`Products-Services/${productServiceId}`} key={index}>
+                <Link to={`/Products-Services/${productServiceId}`} key={index}>
                   <IndustrialCard
                     item={item}
                     
@@ -192,7 +192,7 @@ export default function ProductsServices() {
                 item.title.replace(/\s+/g, "")
               );
               return (
-                <Link to={`Products-Services/${productServiceId}`} key={index}>
+                <Link to={`/Products-Services/${productServiceId}`} key={index}>
                   <IndustrialCard
                     item={item}
                     
@@ -219,7 +219,7 @@ export default function ProductsServices() {
                 item.title.replace(/\s+/g, "")
               );
               return (
-                <Link to={`Products-Services/${productServiceId}`} key={index}>
+                <Link to={`/Products-Services/${productServiceId}`} key={index}>
                   <IndustrialCard
                     item={item}
                     
