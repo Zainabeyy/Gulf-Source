@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  @apply font-Montserrat leading-tight;
+  @apply font-Montserrat leading-tight text-MarianShade1;
   min-height:100vh;
 }
 section {
@@ -17,6 +17,12 @@ h1 {
 }
 h2 {
   @apply uppercase text-SaudiFlagTint2 font-bold text-base;
+}
+input,textarea{
+  @apply border-MarianTint4 border-[1px] py-2 px-4 text-13; 
+}
+img{
+  @apply w-fit h-auto;
 }
 
 

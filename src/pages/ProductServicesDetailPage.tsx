@@ -32,11 +32,11 @@ export default function ProductsServicesDetailPage() {
   }, [params.id]);
 
   if (!productService) {
-    return <section>Product or service not found.</section>;
+    return <section><div className="pt-28 sm:pt-36 min-h-screen leading-[1.75]"><h1>Product or service not found.</h1></div></section>;
   }
 
   return (
-    <div className="text-MarianShade1 leading-[175%]">
+    <div className="leading-[175%]">
       <div className="pt-28 sm:pt-36">
         <section>
           <h1 className="gradient">{productService.title}</h1>

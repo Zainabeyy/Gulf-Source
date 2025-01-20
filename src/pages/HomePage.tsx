@@ -33,7 +33,7 @@ export default function HomePage() {
       className="w-60 h-60 flex justify-center items-center shadow-xl p-8"
       key={index}
     >
-      <img src={`/homePage/${item}.webp`} alt={item} />
+      <img src={`/homePage/${item}.webp`} alt={item} loading="lazy"/>
     </div>
   ));
   return (
@@ -135,7 +135,7 @@ export default function HomePage() {
         <h2>Companies Who Put Trust In Us</h2>
         <div className="w-fit mb-10">
           <div className="gradient-line"></div>
-          <p className="text-xl text-MarianShade1">
+          <p className="text-xl">
             Serving the Best, Trusted by the Best
           </p>
         </div>

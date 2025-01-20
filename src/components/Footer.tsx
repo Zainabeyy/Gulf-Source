@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <section className="bg-MarianShade4 text-13 text-PictonTint4 py-8">
+    <section className="bg-MarianShade4 text-13 text-PictonTint4 py-8 w-full">
       <div className="grid grid-cols-1 gap-6 xs:grid-cols-2 md:grid-cols-3">
         <img src="/Logo.svg" alt="logo" className="mb-4 sm:mb-0 xs:col-span-2 md:col-span-1"/>
         <div className="flex flex-col gap-3">
           <h2 className="mb-4">Jump to</h2>
-          <Link to="">Our Mission & Vision</Link>
-          <Link to="">Products & Services</Link>
-          <Link to="">Certifications</Link>
-          <Link to="">Get in touch with us</Link>
+          <Link to="vision">Our Mission & Vision</Link>
+          <Link to="Products-Services">Products & Services</Link>
+          <Link to="certifications">Certifications</Link>
+          <Link to="contact-us">Get in touch with us</Link>
         </div>
         <div className="flex flex-col gap-3">
           <h2 className="mb-4">Contact Us</h2>
