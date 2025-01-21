@@ -39,7 +39,7 @@ export default function DetailList({ product }: DetailListProps) {
                   <img
                     src={codedName === "materials" ? "/Detail/arrow-icon.svg" : "/Detail/check-icon.svg"}
                     alt="check icon"
-                    className="pr-3"
+                    className={codedName === "materials" ? "pr-3 pt-3" : "pr-3 pt-1"}
                   />
                   <p>{service}</p>
                 </li>

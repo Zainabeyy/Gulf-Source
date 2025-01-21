@@ -1,18 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import { lazy, Suspense } from 'react';
 import Layout from "./components/Layout";
-import ProductsServices from "./pages/Products-Services";
 import Vision from "./pages/Vision";
-import Certifications from "./pages/Certifications";
-import ContactUs from "./pages/ContactUs";
-import ProductsServicesDetailPage from "./pages/ProductServicesDetailPage";
 import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./pages/NotFound";
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ProductsServices = lazy(() => import('./pages/Products-Services'));
+const ProductsServicesDetailPage = lazy(() => import('./pages/ProductServicesDetailPage'));
+const Certifications = lazy(() => import('./pages/Certifications'));
+const ContactUs = lazy(() => import('./pages/ContactUs'));
 
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -24,6 +26,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

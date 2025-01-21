@@ -94,7 +94,7 @@ export default function ContactUs() {
                 />
                 <p className="font-bold">Email</p>
               </div>
-              <p>+loremipsum@lorem.com</p>
+              <p>bdm@gulfsource.net</p>
             </div>
             <div className="mb-14">
               <div className="mb-4">
