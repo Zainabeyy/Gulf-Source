@@ -22,7 +22,7 @@ export default function IndustrialCard({ item, bgImgClr, bgClr,textColor }: Indu
               : "h-[8.438rem] group-hover:h-[5.6rem]"
           } ${
             item.detail.length > 94
-              ? "p-7 group-hover:h-16"
+              ? "p-7 group-hover:h-[4.5rem]"
               : "group-hover:h-[5.6rem]"
           } absolute -top-1 transition-all duration-700 p-8 group-hover:p-5 box-border`}
         >
@@ -38,7 +38,7 @@ export default function IndustrialCard({ item, bgImgClr, bgClr,textColor }: Indu
               item.title.length > 40 ? "h-[6.438rem] group-hover:h-20" : "h-[8.188rem] group-hover:h-[5.438rem]"
             }  ${
             item.detail.length > 94
-              ? "p-7 group-hover:h-16"
+              ? "p-7 group-hover:h-[4.2rem]"
               : "group-hover:h-[5.6rem]"
           } `}
           ></div>

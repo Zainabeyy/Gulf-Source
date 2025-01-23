@@ -24,7 +24,7 @@ export default function Certifications() {
         {certificates.map((item, index) => (
           <div className="bg-gradient-to-r from-MarianBlue to-SaudiFlagGreen p-3 w-fit h-fit mb-14" key={index}>
             <div className="bg-white p-3">
-              <img src={`/certificates/${item}.webp`} alt={item} loading="lazy"/>
+              <img src={`/certificates/${item}.webp`} alt={item} />
             </div>
           </div>
         ))}
