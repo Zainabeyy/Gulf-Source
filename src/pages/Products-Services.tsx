@@ -64,7 +64,7 @@ export default function ProductsServices() {
           </div>
           <div
             style={{ margin: "0rem" }}
-            className="gradient-line opacity-0 group-hover:opacity-100 transition-all duration-500"
+            className="gradient-line opacity-0 block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600 group-hover:opacity-100"
           ></div>
         </a>
       </li>
@@ -94,7 +94,7 @@ export default function ProductsServices() {
       </section>
       <section className="w-full hidden sm:block">
         <div className="relative">
-          <ul className="uppercase font-semibold text-MarianShade1 text-13 flex justify-evenly px-20 py-3 shadow-lg border-2 absolute -top-1/2 left-0 bg-white w-full transform -translate-y-1/2">
+          <ul className="uppercase font-semibold text-MarianShade1 text-13 flex justify-evenly px-20 py-3 shadow-lg  absolute -top-1/2 left-0 bg-white w-full transform -translate-y-1/2">
             {InsideLinkBarEl}
           </ul>
         </div>
