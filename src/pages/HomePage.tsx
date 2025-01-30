@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import Stats from "../components/Stats";
+import { useContainerDimensions } from "../components/useContainerDimensions";
+import { useRef } from "react";
 
 export default function HomePage() {
+  const componentRef = useRef<HTMLAnchorElement>(null);
+  const { width } = useContainerDimensions(componentRef);
+
   const companyDetails = [
     {
       image: "Industrial-Services",
@@ -18,6 +23,11 @@ export default function HomePage() {
       title: "Materials Supplies Division",
       description: "Tailored solutions for your specific requirements.",
     },
+    {
+      image: "AfterSales-Industrial-Services",
+      title: "AfterSales Industrial Services",
+      description: "Seamless Aftersales, Maximum Uptime.",
+    },
   ];
   const companyLogos = [
     "aramco-logo",
@@ -29,11 +39,8 @@ export default function HomePage() {
   ];
 
   const companyLogoEl = companyLogos.map((item, index) => (
-    <div
-      className="w-60 h-60 flex justify-center items-center shadow-xl p-8"
-      key={index}
-    >
-      <img src={`/homePage/${item}.webp`} alt={item} loading="lazy"/>
+    <div className="w-60 h-60 flex-center shadow-xl p-8" key={index}>
+      <img src={`/homePage/${item}.webp`} alt={item} loading="lazy" />
     </div>
   ));
   return (
@@ -45,9 +52,7 @@ export default function HomePage() {
       </div>
       <section className="md:pt-36 pt-32 lg:pt-44 text-white min-h-[500px] 2xl:h-[37.5rem]">
         <div>
-          <h1>
-            Your Trusted Partner for Industrial Supplies and Services
-          </h1>
+          <h1>Your Trusted Partner for Industrial Supplies and Services</h1>
           <div className="w-fit">
             <div className="gradient-line"></div>
             <p className="xl:text-xl">
@@ -58,14 +63,14 @@ export default function HomePage() {
         </div>
         <div className="pt-10 flex gap-2 flex-col xs:flex-row">
           <Link
-            to=""
-            className="bg-MarianBlue hover:bg-MarianShade1 gradient-border"
+            to="/contact-us"
+            className="bg-MarianBlue hover:bg-MarianShade1 gradient-border flex-center"
           >
             Get a Free Quote
           </Link>
           <Link
-            to=""
-            className="gradient-border backdrop-blur-md bg-MarianShade1 bg-opacity-20 hover:bg-opacity-40"
+            to="/Products-Services"
+            className="gradient-border backdrop-blur-md bg-MarianShade1 bg-opacity-20 hover:bg-opacity-40 text-white flex-center"
           >
             Browse Services
           </Link>
@@ -74,30 +79,43 @@ export default function HomePage() {
 
       {/* company overview */}
 
-      <section className="flex xl:justify-between justify-center flex-grow flex-wrap xl:gap-10 py-16 gap-8">
+      <section className="grid-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lgCustom:grid-cols-4 xl:gap-10 py-16 gap-8">
         {companyDetails.map((item, index) => {
           return (
             <Link
+              ref={componentRef}
               to={`/Products-Services/#${item.image}`}
               key={index}
-              className="companyDetailCard group max-w-[18rem] sm:max-w-[19.5rem] 2xl:max-w-[25rem] min-h-[17rem] p-6 bg-no-repeat bg-center bg-cover overflow-hidden flex items-end transition-all duration-1000"
-              style={{
-                backgroundImage: `linear-gradient(to bottom, rgba(9, 13, 23, 0), rgba(49, 71, 125, 0.66)), url('/homePage/${item.image}.webp')`,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundSize = "110%";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundSize = "100%";
-              }}
+              className="companyDetailCard group flex-1 min-w-60 max-w-80 min-h-[17rem] p-6  overflow-hidden flex items-end transition-all duration-1000 relative"
             >
+              <div className="absolute top-0 left-0 w-full h-full">
+                <img
+                  src={`/homePage/${item.image}.webp`}
+                  alt={`/homePage/${item.title}`}
+                  className="w-full h-full object-cover absolute group-hover:scale-110 transition-all duration-1000"
+                />
+                <div
+                  className="w-full h-full absolute scale-y-150 translate-y-1/4 group-hover:translate-y-0 transition-all duration-1000"
+                  style={{
+                    backgroundImage: `linear-gradient(to bottom, transparent 0%, #31477D 100%)`,
+                  }}
+                ></div>
+              </div>
               <div className="relative ease-in-out transform translate-y-[83%] group-hover:translate-y-0 transition-transform duration-1000">
-                <h2 className="group-hover:translate-y-0 group-hover:text-base mb-5 w-[20ch] group-hover:mb-0 transition-all duration-1000 ease-in-out font-bold text-base sm:text-xl  text-white uppercase">
+                <h2
+                  className={`group-hover:translate-y-0 text-xl group-hover:text-base mb-5 group-hover:mb-0 transition-all duration-1000 ease-in-out font-bold text-white uppercase   ${
+                    item.title.length > 20 ? "-translate-y-6" : "-translate-y-0"
+                  } ${width < 316 ? "w-[13ch] -translate-y-8" : "w-[20ch]"} ${
+                    width < 316 && item.title.length > 20
+                      ? "-translate-y-[3.2rem]"
+                      : "-translate-y-0"
+                  }`}
+                >
                   {item.title}
                 </h2>
                 <div className="w-fit opacity-1">
                   <div className="gradient-line"></div>
-                  <p className="text-MarianTint4 text-xl font-medium">
+                  <p className="text-MarianTint4 text-base font-medium">
                     {item.description}
                   </p>
                 </div>
@@ -135,22 +153,16 @@ export default function HomePage() {
         <h2>Companies Who Put Trust In Us</h2>
         <div className="w-fit mb-10">
           <div className="gradient-line"></div>
-          <p className="text-xl">
-            Serving the Best, Trusted by the Best
-          </p>
+          <p className="text-xl">Serving the Best, Trusted by the Best</p>
         </div>
 
         {/* logo carousel */}
 
         <div className="flex flex-nowrap slide gap-6 w-full">
-          <div
-            className="shrink-0 gap-6 flex flex-nowrap animate-slide"
-          >
+          <div className="shrink-0 gap-6 flex flex-nowrap animate-slide">
             {companyLogoEl}
           </div>
-          <div
-            className="shrink-0 gap-6 flex flex-nowrap animate-slide"
-          >
+          <div className="shrink-0 gap-6 flex flex-nowrap animate-slide">
             {companyLogoEl}
           </div>
         </div>
@@ -173,7 +185,7 @@ export default function HomePage() {
             To be the leading provider of innovative industrial solutions
           </p>
           <Link
-            to=""
+            to="/vision"
             className="gradient-border backdrop-blur-md bg-MarianShade1 bg-opacity-20 hover:bg-opacity-40 text-white"
           >
             Read More About Us

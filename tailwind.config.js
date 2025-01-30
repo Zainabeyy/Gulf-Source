@@ -7,6 +7,10 @@ export default {
         '0%': { transform: 'translate(0)' },
         '100%': { transform: 'translate(-100%)' },
       },
+      bgGradient: {
+        '0%': { backgroundPosition: '25%' },  // Fixed spelling
+      '100%': { backgroundPosition: '0%' },
+      }
   },
   animation:{
     slide:'slide 10s infinite linear',
@@ -19,6 +23,7 @@ export default {
       colors: {
         MarianShade1:'#25325E',
         MarianShade2: '#1C2646',
+        MarianShade3: '#12192F',
         MarianTint1:'#586591',
         MarianTint2:'#828CAC',
         MarianTint3:'#ABB2C8',
@@ -45,9 +50,10 @@ export default {
       },
       screens:{
         xs:'451px',
+        lgCustom:'1280px'
       }
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 }
 

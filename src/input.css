@@ -25,6 +25,10 @@ img{
   @apply w-fit h-auto;
 }
 
+.flex-center{
+  @apply flex items-center justify-center;
+}
+
 
 /* ---- gradient ---- */
 
@@ -33,6 +37,9 @@ img{
 }
 .hover-gradient:hover {
   @apply gradient;
+}
+.blueGreenGradient {
+  @apply font-extrabold text-transparent bg-gradient-to-r from-MarianBlue to-SaudiFlagGreen bg-clip-text transition-all duration-500;
 }
 .product-service-nav-item:hover p.title{
   @apply gradient;
@@ -104,16 +111,13 @@ img{
   @apply bg-no-repeat bg-center bg-cover h-full min-h-[500px] 2xl:h-[600px];
 }
 
-
-.companyDetailCard:nth-child(3) h2 {
-  @apply -translate-y-6 group-hover:translate-y-0;
-}
-
-
 .industrial-card .shadow-div{
   @apply hidden;
 }
 
+.transition-timing{
+  transition-timing-function:cubic-bezier(0.01, 0.85, 0.45, 1);
+}
 
 
 @media (min-width: 451px) {
