@@ -78,10 +78,10 @@ img{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 .menu {
-  @apply text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase;
+  @apply text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase p-4 pb-6 md:pb-0 md:p-0;
 }
 .navItem {
-  @apply p-6 py-8;
+  @apply p-2 md:p-6 md:py-8;
 }
 .navLink {
   @apply transition-all duration-300 hover-gradient;

@@ -117,7 +117,7 @@ export default function Navbar() {
             transition={{ duration: 0.5, ease: "easeInOut" }} 
             className={`${
               isDropdownOpen ? "md:block" : "hidden"
-            } hidden left-0 bgBlur z-40 top-[88px] absolute w-full py-6 px-33 2xl:px-52`}
+            } hidden left-0 bgBlur z-40 top-[80px] 2xl:top-[88px] absolute w-full py-6 px-9 lg:px-33 2xl:px-52`}
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <DropDownMenu/>

@@ -97,7 +97,7 @@ export default function DropDownMenu() {
                       }`}
                     />
                   </div>
-                  <p className={`title text-13 ${sectionName === productServiceId ? 'gradient' : ''}`}>{item.title}</p>
+                  <p className={`title text-[0.7rem] lg:text-13 ${sectionName === productServiceId ? 'gradient' : ''}`}>{item.title}</p>
                 </div>
               </a>
             </li>
@@ -125,13 +125,13 @@ export default function DropDownMenu() {
                       return (
                         <React.Fragment key={index}>
                           {sectId === "MaterialsSuppliesDivision" ? (
-                            <li className="text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500">
+                            <li className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500">
                               <div className="max-w-[19ch]">{service}</div>
                             </li>
                           ) : (
                             <Link
                               to={`/Products-Services/${productServiceId}`}
-                              className="text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500"
+                              className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500"
                             >
                               <div className="max-w-[19ch]">{service}</div>
                             </Link>
