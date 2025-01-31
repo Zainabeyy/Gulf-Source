@@ -1,4 +1,8 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+
 export default function ContactUs() {
+  const [showPopup, setShowPopup] = useState(false);
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formEl = event.currentTarget;
@@ -9,6 +13,7 @@ export default function ContactUs() {
     const Inquiry = formData.get("Inquiry");
     console.log(email, firstName, lastName, Inquiry);
     formEl.reset();
+    setShowPopup(true);
   }
 
   return (
@@ -109,6 +114,31 @@ export default function ContactUs() {
             </div>
           </div>
         </section>
+        <AnimatePresence>
+          {showPopup && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+              
+            >
+              <motion.div
+                className="bg-white p-8 rounded shadow-lg text-center"
+                initial={{opacity:0, y: "-100px" }}
+                animate={{opacity:100, y: 0 }}
+                exit={{opacity:0, y: "-100px", transition:{duration:0.2} }}
+                transition={{ duration: 0.3 }}
+              >
+                <h3 className="text-lg font-bold mb-2 gradient uppercase">Thank you!</h3>
+                <p>We will get back to you shortly.</p>
+                <button
+                  onClick={() => setShowPopup(false)}
+                  className="mt-8 gradient-border bg-MarianShade1 text-white px-4 py-2 rounded"
+                >
+                  Ok
+                </button>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
