@@ -78,10 +78,10 @@ img{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 .menu {
-  @apply p-3 text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase;
+  @apply text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase;
 }
 .navItem {
-  @apply p-2;
+  @apply p-6 py-8;
 }
 .navLink {
   @apply transition-all duration-300 hover-gradient;
@@ -102,7 +102,6 @@ img{
 .bgBlur {
   @apply bg-MarianShade1 bg-opacity-55 backdrop-blur-md;
 }
-
 
 /* ---- hero section backgroundImg ---- */
 

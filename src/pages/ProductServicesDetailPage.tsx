@@ -50,7 +50,7 @@ export default function ProductsServicesDetailPage() {
             <div>
               <p className="font-base mb-10">{productService.detail}</p>
               <Link
-                to=""
+                to="/contact-us"
                 className="bg-MarianBlue hover:bg-MarianShade1 gradient-border text-white"
               >
                 Get a Free Quote

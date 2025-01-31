@@ -24,26 +24,22 @@ export default function ProductsServices() {
 
   const InsideLinkBar = [
     {
-      img: "grommet-icons_services",
-      hoverImg: "grommet-icons-gradient",
+      img: "grommet-icons",
       sectionId: "Industrial-Services",
       title: "Industrial Services",
     },
     {
-      img: "material-symbols_valve",
-      hoverImg: "material-valve-gradient",
+      img: "material-valve",
       sectionId: "Industrial-Products",
       title: "Industrial Products",
     },
     {
       img: "tabler_package",
-      hoverImg: "tabler_package-gradient",
       sectionId: "Materials-Supplies-Division",
       title: "Materials Supplies Division",
     },
     {
       img: "aftersales",
-      hoverImg: "aftersales-gradient",
       sectionId: "AfterSales-Industrial-Services",
       title: "Aftersales",
     },
@@ -87,12 +83,12 @@ export default function ProductsServices() {
                     <div className="flex flex-wrap items-center">
                       <div className="relative">
                         <img
-                          src={`/Products-Services/Nav/${item.hoverImg}.svg`}
+                          src={`/Nav/${item.img}-gradient.svg`}
                           alt={item.img}
                           className="inline mr-2 absolute  opacity-0 transition-all duration-500 group-hover:opacity-100"
                         />
                         <img
-                          src={`/Products-Services/Nav/${item.img}.svg`}
+                          src={`/Nav/${item.img}.svg`}
                           alt={item.img}
                           className="inline mr-2 transition-all duration-500 group-hover:opacity-0"
                         />
