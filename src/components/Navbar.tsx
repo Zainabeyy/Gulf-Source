@@ -24,21 +24,18 @@ export default function Navbar() {
   // function so that user can close the menu by touching outside
 
   useEffect(() => {
+    if (!isOpened) return;
+  
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        if (isOpened) {
-          setBurgerClass("bar unclicked");
-          setMenuClass("menu hidden");
-        } else {
-          setBurgerClass("bar clicked");
-          setMenuClass("menu visible");
-        }
-        setOpen(!isOpened);
+        setBurgerClass("bar unclicked");
+        setMenuClass("menu hidden");
+        setOpen(false);
       }
     };
-
+  
     document.addEventListener("mousedown", handleClickOutside);
-
+  
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
