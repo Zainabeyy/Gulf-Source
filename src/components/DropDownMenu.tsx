@@ -68,14 +68,14 @@ export default function DropDownMenu() {
   ];
   return (
     <div className="flex text-white gap-x-10">
-      <ul className="flex flex-col items-start gap-y-4 ">
+      <ul className="flex flex-col items-start gap-y-4 min-w-[258px]">
         {InsideLinkBar.map((item, index) => {
           const productServiceId = item.title.replace(/\s+/g, "");
           return (
             <li
               onMouseEnter={() => setSectName(productServiceId)}
               className={`hover:font-bold group product-service-nav-item uppercase w-fit ${
-                sectionName === productServiceId ? 'font-bold' : ''
+                sectionName === productServiceId ? "font-bold" : ""
               }`}
               key={index}
             >
@@ -86,18 +86,24 @@ export default function DropDownMenu() {
                       src={`/Nav/${item.img}-gradient.svg`}
                       alt={item.img}
                       className={`inline mr-2 absolute opacity-0 transition-all duration-500 group-hover:opacity-100 ${
-                        sectionName === productServiceId ? 'opacity-100' : ''
+                        sectionName === productServiceId ? "opacity-100" : ""
                       }`}
                     />
                     <img
                       src={`/Nav/${item.img}-white.svg`}
                       alt={item.img}
                       className={`inline mr-2 transition-all duration-500 group-hover:opacity-0 ${
-                        sectionName === productServiceId ? 'opacity-0' : ''
+                        sectionName === productServiceId ? "opacity-0" : ""
                       }`}
                     />
                   </div>
-                  <p className={`title text-[0.7rem] lg:text-13 ${sectionName === productServiceId ? 'gradient' : ''}`}>{item.title}</p>
+                  <p
+                    className={`title text-[0.7rem] lg:text-13 ${
+                      sectionName === productServiceId ? "gradient" : ""
+                    }`}
+                  >
+                    {item.title}
+                  </p>
                 </div>
               </a>
             </li>
@@ -116,7 +122,7 @@ export default function DropDownMenu() {
                     initial={{ opacity: 0, translateX: -10 }}
                     animate={{ opacity: 1, translateX: 0 }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
-                    className="grid grid-cols-3 gap-2 items-center"
+                    className="grid grid-cols-3 xl:grid-cols-4  gap-2 items-center"
                   >
                     {item.content.map((service, index) => {
                       const productServiceId = encodeURIComponent(

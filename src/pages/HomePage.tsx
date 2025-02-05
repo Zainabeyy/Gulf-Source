@@ -79,7 +79,7 @@ export default function HomePage() {
 
       {/* company overview */}
 
-      <section className="grid-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lgCustom:grid-cols-4 xl:gap-10 py-16 gap-8">
+      <section className="grid-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:gap-10 py-16 gap-8">
         {companyDetails.map((item, index) => {
           return (
             <Link
@@ -103,12 +103,12 @@ export default function HomePage() {
               </div>
               <div className="relative ease-in-out transform translate-y-[83%] group-hover:translate-y-0 transition-transform duration-1000">
                 <h2
-                  className={`group-hover:translate-y-0 text-xl group-hover:text-base mb-5 w-full group-hover:mb-0 transition-all duration-1000 ease-in-out font-bold text-white uppercase   ${
-                    item.title.length > 20 ? "-translate-y-6" : "-translate-y-0"
-                  } ${width < 316 ? "w-[13ch] -translate-y-8" : "w-[20ch]"} ${
-                    width < 316 && item.title.length > 20
+                  className={`group-hover:translate-y-0 text-xl 3xl:w-[20ch] group-hover:text-base mb-5 group-hover:mb-0 transition-all duration-1000 ease-in-out font-bold text-white uppercase  ${
+                    width < 290 && item.title.length > 20
                       ? "-translate-y-[3.2rem]"
                       : "-translate-y-0"
+                  } ${width < 290 ? "w-[13ch] -translate-y-8" : "w-[20ch]"} ${
+                    item.title.length > 20 ? "-translate-y-6" : "-translate-y-0"
                   }`}
                 >
                   {item.title}

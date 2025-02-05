@@ -88,7 +88,7 @@ export default function ContactUs() {
                 />
                 <p className="font-bold">Tel</p>
               </div>
-              <p>+966550434248</p>
+              <p>+96502276963</p>
             </div>
             <div className="mb-14">
               <div className="mb-4">
@@ -110,7 +110,7 @@ export default function ContactUs() {
                 />
                 <p className="font-bold">Address</p>
               </div>
-              <p>Al Khobar Gate Tower, Saudi Arabia</p>
+              <p>Al Bargash Tower, Al Khobar, Saudi Arabia</p>
             </div>
           </div>
         </section>

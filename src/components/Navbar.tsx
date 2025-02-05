@@ -106,21 +106,21 @@ export default function Navbar() {
         </ul>
       </div>
       <AnimatePresence>
-        {isDropdownOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }} 
-            animate={{ opacity: 1, height: 'auto' }} 
-            exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }} 
-            transition={{ duration: 0.5, ease: "easeInOut" }} 
-            className={`${
-              isDropdownOpen ? "md:block" : "hidden"
-            } hidden left-0 bgBlur z-40 top-[80px] 2xl:top-[88px] absolute w-full py-6 px-9 lg:px-33 2xl:px-52`}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
-            <DropDownMenu/>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isDropdownOpen && (
+        <motion.div
+        layout
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height:'auto' }}
+          exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="absolute left-0 bgBlur z-40 top-[80px] 2xl:top-[88px] w-full py-6 px-9 lg:px-33 2xl:px-52"
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <DropDownMenu />
+        </motion.div>
+      )}
+    </AnimatePresence>
+
       
     </header>
   );

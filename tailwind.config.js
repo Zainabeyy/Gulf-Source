@@ -50,7 +50,7 @@ export default {
       },
       screens:{
         xs:'451px',
-        lgCustom:'1280px'
+        "3xl": '1700px'
       }
     },
   },

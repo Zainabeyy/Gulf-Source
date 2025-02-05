@@ -16,7 +16,7 @@ export default function Footer() {
           <h2 className="mb-4">Contact Us</h2>
           <p>+96502276963</p>
           <p>Al Bargash Tower, Al Khobar, Saudi Arabia</p>
-          <p>sales@gulfsource.com.sa</p>
+          <p>bdm@gulfsource.net</p>
           <div className="flex gap-4">
             <Link to="">
               <img src="/facebook-icon.svg" alt="facebook-icon" />
