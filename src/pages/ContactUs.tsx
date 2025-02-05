@@ -3,18 +3,39 @@ import { useState } from "react";
 
 export default function ContactUs() {
   const [showPopup, setShowPopup] = useState(false);
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formEl = event.currentTarget;
     const formData = new FormData(formEl);
+    
     const email = formData.get("email");
     const firstName = formData.get("firstName");
     const lastName = formData.get("lastName");
     const Inquiry = formData.get("Inquiry");
-    console.log(email, firstName, lastName, Inquiry);
+
+    try {
+        const response = await fetch("https://gulf-sourse-backend.onrender.com/api-contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, firstName, lastName, Inquiry }),
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to send inquiry.");
+        }
+
+        console.log("Email sent successfully");
+        setShowPopup(true);
+    } catch (error) {
+        console.error("Error submitting form:", error);
+    }
+
     formEl.reset();
-    setShowPopup(true);
-  }
+}
+
 
   return (
     <div className="pt-28 sm:pt-40">
