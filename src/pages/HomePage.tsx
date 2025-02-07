@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Stats from "../components/Stats";
 import { useContainerDimensions } from "../components/useContainerDimensions";
-import { useRef } from "react";
+import { useRef} from "react";
+import VideoPlayer from "../components/VideoPlayer";
 
 export default function HomePage() {
   const componentRef = useRef<HTMLAnchorElement>(null);
@@ -145,6 +146,16 @@ export default function HomePage() {
           </div>
           <Stats />
         </div>
+      </section>
+
+      {/* company profile */}
+
+      <section className="py-16">
+        <div className="w-fit mb-6">
+          <h2>our company profile</h2>
+          <div className="gradient-line"></div>
+        </div>
+        <VideoPlayer/>
       </section>
 
       {/* other company who worked with gulf source  */}

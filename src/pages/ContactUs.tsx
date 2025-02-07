@@ -152,7 +152,7 @@ export default function ContactUs() {
                 <p>We will get back to you shortly.</p>
                 <button
                   onClick={() => setShowPopup(false)}
-                  className="mt-8 gradient-border bg-MarianShade1 text-white px-4 py-2 rounded"
+                  className="mt-8 uppercase gradient-border bg-MarianShade1 text-white px-4 py-2 rounded"
                 >
                   Ok
                 </button>

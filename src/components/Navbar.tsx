@@ -25,7 +25,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!isOpened) return;
-  
+
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setBurgerClass("bar unclicked");
@@ -33,9 +33,9 @@ export default function Navbar() {
         setOpen(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleClickOutside);
-  
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -74,7 +74,9 @@ export default function Navbar() {
           </li>
           <li className="navItem">
             <NavLink
-            onMouseEnter={()=>{setDropdownOpen(false)}}
+              onMouseEnter={() => {
+                setDropdownOpen(false);
+              }}
               to="vision"
               className={({ isActive }) =>
                 isActive ? "navLink gradient" : "navLink"
@@ -113,7 +115,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height:'auto' }}
           exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute left-0 bgBlur z-40 top-[80px] 2xl:top-[88px] w-full py-6 px-9 lg:px-33 2xl:px-52"
+          className="absolute left-0 bgBlur z-40 top-[5.017rem] 2xl:top-[88px] w-full py-6 px-9 lg:px-33 2xl:px-52"
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <DropDownMenu />

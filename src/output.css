@@ -622,8 +622,8 @@ video {
   top: 1rem;
 }
 
-.top-\[80px\] {
-  top: 80px;
+.top-\[5\.017rem\] {
+  top: 5.017rem;
 }
 
 .-z-50 {
@@ -738,6 +738,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mb-7 {
   margin-bottom: 1.75rem;
 }
@@ -817,8 +821,16 @@ video {
   height: 0.125rem;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-16 {
   height: 4rem;
+}
+
+.h-20 {
+  height: 5rem;
 }
 
 .h-44 {
@@ -882,6 +894,10 @@ video {
   min-height: 100vh;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
 .w-24 {
   width: 6rem;
 }
@@ -908,10 +924,6 @@ video {
 
 .w-\[6\.875rem\] {
   width: 6.875rem;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .w-fit {
@@ -1167,6 +1179,10 @@ video {
   row-gap: 1.75rem;
 }
 
+.justify-self-center {
+  justify-self: center;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1185,6 +1201,10 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .bg-MarianBlue {
@@ -1222,9 +1242,17 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-black\/\[33\%\] {
+  background-color: rgb(0 0 0 / 33%);
+}
+
 .bg-sky-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity, 1));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-white {
@@ -1260,6 +1288,18 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-PrimaryGradientClr1 {
+  --tw-gradient-from: #2ca8dc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(44 168 220 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-transparent {
   --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1269,8 +1309,16 @@ video {
   --tw-gradient-to: #165D31 var(--tw-gradient-to-position);
 }
 
+.to-green-400 {
+  --tw-gradient-to: #4ade80 var(--tw-gradient-to-position);
+}
+
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.to-PrimaryGradientClr2 {
+  --tw-gradient-to: #d0df8a var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -1305,6 +1353,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-6 {
@@ -1373,6 +1425,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -1430,6 +1486,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-\[0\.625rem\] {
@@ -1572,6 +1633,12 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1580,6 +1647,10 @@ video {
 
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .duration-500 {
@@ -1986,6 +2057,22 @@ img {
   }
 }
 
+@media (hover:hover){
+  .video-container:hover .video-button {
+    opacity: 1;
+  }
+}
+
+@media (hover:none){
+  .touch-hidden {
+    opacity: 0;
+  }
+
+  .touch-visible {
+    opacity: 1;
+  }
+}
+
 .hover\:bg-MarianShade1:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 50 94 / var(--tw-bg-opacity, 1));
@@ -2140,6 +2227,16 @@ img {
   -webkit-line-clamp: unset;
 }
 
+@media (hover: none) {
+  .touch\:opacity-0 {
+    opacity: 0;
+  }
+
+  .touch\:opacity-100 {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 451px) {
   .xs\:col-span-2 {
     grid-column: span 2 / span 2;
@@ -2242,8 +2339,16 @@ img {
     display: none;
   }
 
+  .md\:h-28 {
+    height: 7rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
   }
 
   .md\:grid-cols-3 {
@@ -2387,7 +2492,15 @@ img {
 }
 
 @media (min-width: 1700px) {
+  .\33xl\:w-11\/12 {
+    width: 91.666667%;
+  }
+
   .\33xl\:w-\[20ch\] {
     width: 20ch;
+  }
+
+  .\33xl\:w-10\/12 {
+    width: 83.333333%;
   }
 }

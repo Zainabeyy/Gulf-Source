@@ -4,6 +4,24 @@ import { Link } from "react-router-dom";
 
 export default function DropDownMenu() {
   const [sectionName, setSectName] = React.useState("");
+  const [height, setHeight] = React.useState("11rem");
+
+  React.useEffect(() => {
+    const updateHeight = () => {
+      if (
+        sectionName === "IndustrialServices" ||
+        sectionName === "Aftersales"
+      ) {
+        setHeight(window.innerWidth >= 1280 ? "13rem" : "17.5rem");
+      } else {
+        setHeight("11rem");
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [sectionName]);
 
   const InsideLinkBar = [
     {
@@ -67,7 +85,14 @@ export default function DropDownMenu() {
     },
   ];
   return (
-    <div className="flex text-white gap-x-10">
+    <motion.div
+      className="flex text-white gap-x-10 overflow-hidden"
+      initial={{ height: "0rem" }}
+      animate={{
+        height,
+      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
       <ul className="flex flex-col items-start gap-y-4 min-w-[258px]">
         {InsideLinkBar.map((item, index) => {
           const productServiceId = item.title.replace(/\s+/g, "");
@@ -153,6 +178,6 @@ export default function DropDownMenu() {
           return null;
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
