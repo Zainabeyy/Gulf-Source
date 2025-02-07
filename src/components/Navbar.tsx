@@ -115,7 +115,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height:'auto' }}
           exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="absolute left-0 bgBlur z-40 top-[5.017rem] 2xl:top-[88px] w-full py-6 px-9 lg:px-33 2xl:px-52"
+          className="absolute left-0 bgBlur z-40 top-[5.017rem] 2xl:top-[88px] w-full py-6 px-9 lg:px-33 2xl:px-52 hidden md:block"
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <DropDownMenu />

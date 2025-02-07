@@ -59,13 +59,13 @@ export default function ContactUs() {
           <form
             onSubmit={handleSubmit}
             method="POST"
-            className="grid grid-cols-2 gap-4"
+            className="grid sm:grid-cols-2 grid-cols-1 gap-4"
           >
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="col-span-2"
+              className="sm:col-span-2"
             />
             <input
               type="text"
@@ -82,13 +82,14 @@ export default function ContactUs() {
             <textarea
               name="Inquiry"
               id=""
-              className="col-span-2 h-44"
+              className="sm:col-span-2 h-44"
               placeholder="Inquiry"
               required
             ></textarea>
             <button
               type="submit"
               className="gradient-border bg-MarianShade1 text-white"
+              style={{padding:"0.6rem"}}
             >
               Send Inquiry
             </button>

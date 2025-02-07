@@ -20,10 +20,10 @@ export default function Certifications() {
           </p>
         </div>
       </section>
-      <section className="columns-1 sm:columns-2 lg:columns-3 my-14 gap-14">
+      <section className="columns-1 sm:columns-2 lg:columns-3 place-items-center my-14 gap-14">
         {certificates.map((item, index) => (
-          <div className="bg-gradient-to-r from-MarianBlue to-SaudiFlagGreen p-3 w-fit h-fit mb-14" key={index}>
-            <div className="bg-white p-3">
+          <div className="bg-gradient-to-r from-MarianBlue to-SaudiFlagGreen sm:p-3 p-1 w-fit h-fit mb-14" key={index}>
+            <div className="bg-white sm:p-3 p-1">
               <img src={`/certificates/${item}.webp`} alt={item} />
             </div>
           </div>

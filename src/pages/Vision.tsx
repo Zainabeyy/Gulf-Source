@@ -136,16 +136,16 @@ export default function Vision() {
               >
                 <div className="relative">
                   <div className="relative">
-                  <img
-                    src={`/vision/${item.img}.svg`}
-                    alt={item.img}
-                    className="group-hover:w-10 w-[6.875rem] mr-3 transition-all duration-500 opacity-100 group-hover:opacity-0"
-                  />
-                  <img
-                    src={`/vision/${item.img}-light.svg`}
-                    alt={item.img}
-                    className="group-hover:w-10 w-[6.875rem] mr-3 transition-all duration-500 absolute top-0 left-0 object-contain opacity-0 group-hover:opacity-100"
-                  />
+                    <img
+                      src={`/vision/${item.img}.svg`}
+                      alt={item.img}
+                      className="group-hover:w-10 w-[6.875rem] mr-3 transition-all duration-500 opacity-100 group-hover:opacity-0"
+                    />
+                    <img
+                      src={`/vision/${item.img}-light.svg`}
+                      alt={item.img}
+                      className="group-hover:w-10 w-[6.875rem] mr-3 transition-all duration-500 absolute top-0 left-0 object-contain opacity-0 group-hover:opacity-100"
+                    />
                   </div>
                   <h2
                     className={`absolute left-0 group-hover:-translate-y-10 group-hover:translate-x-14 ${
@@ -162,14 +162,20 @@ export default function Vision() {
               </li>
             );
           })}
-          <img src="/vision/arrow.svg" alt="arrow" className="absolute bottom-52 right-20 rotate-6 hidden md:block"/>
+          <img
+            src="/vision/arrow.svg"
+            alt="arrow"
+            className="absolute bottom-52 right-20 rotate-6 hidden md:block"
+          />
         </ul>
       </section>
 
-
       <section className="flex flex-col items-center py-16">
-        <img src="/vision/quote.svg" alt="quote icon" loading="lazy"/>
-        <p className="blueGreenGradient text-4xl font-bold w-fit text-center my-6">We don’t just build products, we build trust and relationships that last generations.</p>
+        <img src="/vision/quote.svg" alt="quote icon" loading="lazy" />
+        <p className="blueGreenGradient text-4xl font-bold w-fit text-center my-6">
+          We don’t just build products, we build trust and relationships that
+          last generations.
+        </p>
         <div className="pt-10 pb-4 flex gap-2 flex-col xs:flex-row">
           <Link
             to="/contact-us"
