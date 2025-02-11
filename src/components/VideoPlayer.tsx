@@ -1,19 +1,31 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
+import { motion, useInView } from "framer-motion";
 
 const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [userPaused, setUserPaused] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-30% 0px" });
+
+  useEffect(()=>{
+    if(isInView && videoRef.current && !userPaused){
+        videoRef.current.play();
+        setIsPlaying(true);
+    }
+  },[isInView,userPaused])
 
   const togglePlayPause = () => {
     if (videoRef.current) {
       if (videoRef.current.paused) {
         videoRef.current.play();
         setIsPlaying(true);
+        setUserPaused(false)
       } else {
         videoRef.current.pause();
         setIsPlaying(false);
+        setUserPaused(true)
       }
     }
   };
@@ -28,7 +40,8 @@ const VideoSection = () => {
 
   return (
     <div
-      className="video-container justify-self-center relative group w-full 3xl:w-10/12 bg-transparent"
+    ref={ref}
+      className="video-container justify-self-center relative group w-full bg-transparent"
       onClick={togglePlayPause}
     >
       {/* Play/Pause Button */}

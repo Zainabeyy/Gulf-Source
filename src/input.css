@@ -78,26 +78,13 @@ img{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 .menu {
-  @apply text-MarianTint4 font-semibold text-13 2xl:text-base text-center w-[calc(100%-4rem)] mx-auto rounded-xl md:bg-transparent uppercase p-4 pb-6 md:pb-0 md:p-0;
+  @apply text-MarianTint4 font-semibold text-13 2xl:text-base mx-auto uppercase md:py-0 md:max-h-max md:opacity-100;
 }
 .navItem {
-  @apply p-2 md:p-6 md:py-8;
+  @apply p-2 py-4 md:p-6 md:py-8;
 }
 .navLink {
   @apply transition-all duration-300 hover-gradient;
-}
-@keyframes appears {
-  from {
-    transform: scale(100%, 0%);
-    opacity: 0;
-  }
-  to {
-    transform: scale(100%, 100%);
-    opacity: 1;
-  }
-}
-.menu.visible {
-  animation: appears 0.5s;
 }
 .bgBlur {
   @apply bg-MarianShade1 bg-opacity-55 backdrop-blur-md;

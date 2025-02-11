@@ -2,7 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function DropDownMenu() {
+type insideData={
+  img:string,
+  sectionId:string,
+  title:string,
+  content:string[]
+}
+
+export default function DropDownMenu({data}:{data:insideData[]}) {
   const [sectionName, setSectName] = React.useState("");
   const [height, setHeight] = React.useState("11rem");
 
@@ -23,78 +30,19 @@ export default function DropDownMenu() {
     return () => window.removeEventListener("resize", updateHeight);
   }, [sectionName]);
 
-  const InsideLinkBar = [
-    {
-      img: "grommet-icons",
-      sectionId: "Industrial-Services",
-      title: "Industrial Services",
-      content: [
-        "Plant Maintenance & Turn Around",
-        "Mechanical & Pipeline Integration",
-        "Pipeline De-pressurizing",
-        "Valves & Actuator Services",
-        "Industrial Engineered Material Supplies",
-        "Fabrication Of Spare Parts Customized Fabrication Services",
-        "Automation & Dcs Integration",
-        "Engineered Equipments & Skids Supplies",
-        "Hydraulic & Industrial Services / Hoses",
-        "Telecom ,osp & Foc Integration",
-      ],
-    },
-    {
-      img: "material-valve",
-      sectionId: "Industrial-Products",
-      title: "Industrial Products",
-      content: [
-        "Valves",
-        "Piping",
-        "fitting and flanges",
-        "Structural Steel",
-        "Instrumentation & Telecommunication",
-        "Electrical",
-      ],
-    },
-    {
-      img: "tabler_package",
-      sectionId: "Materials-Supplies-Division",
-      title: "Materials Supplies Division",
-      content: [
-        "Custom Packaging and labeling",
-        "Consignment Stock",
-        "Sourcing",
-        "Traceability",
-        "Usage Forecasting",
-      ],
-    },
-    {
-      img: "aftersales",
-      sectionId: "AfterSales-Industrial-Services",
-      title: "Aftersales",
-      content: [
-        "Plant Maintenance & Turn Around",
-        "Mechanical & Pipeline Integration",
-        "Pipeline De-pressurizing",
-        "Valves & Actuator Services",
-        "Industrial Engineered Material Supplies",
-        "Fabrication Of Spare Parts Customized Fabrication Services",
-        "Automation & Dcs Integration",
-        "Engineered Equipments & Skids Supplies",
-        "Hydraulic & Industrial Services / Hoses",
-        "Telecom ,osp & Foc Integration",
-      ],
-    },
-  ];
   return (
     <motion.div
       className="flex text-white gap-x-10 overflow-hidden"
-      initial={{ height: "0rem" }}
+      initial={{ height: 0, opacity: 0 }}
       animate={{
         height,
+        opacity: 1,
       }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <ul className="flex flex-col items-start gap-y-4 min-w-[258px]">
-        {InsideLinkBar.map((item, index) => {
+        {data.map((item, index) => {
           const productServiceId = item.title.replace(/\s+/g, "");
           return (
             <li
@@ -137,7 +85,7 @@ export default function DropDownMenu() {
       </ul>
       <div className="w-[1px] opacity-10 bg-MarianTint4"></div>
       <div>
-        {InsideLinkBar.map((item) => {
+        {data.map((item) => {
           const sectId = item.title.replace(/\s+/g, "");
           if (sectId === sectionName) {
             return (
@@ -156,13 +104,13 @@ export default function DropDownMenu() {
                       return (
                         <React.Fragment key={index}>
                           {sectId === "MaterialsSuppliesDivision" ? (
-                            <li className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500">
+                            <li className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-40 2xl:min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500">
                               <div className="max-w-[19ch]">{service}</div>
                             </li>
                           ) : (
                             <Link
                               to={`/Products-Services/${productServiceId}`}
-                              className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500"
+                              className="text-[0.7rem] lg:text-13 font-semibold text-MarianTint4 pl-3 flex items-center min-w-40 2xl:min-w-56 h-16 hover:bg-MarianTint4/10 hover:text-white transition-all duration-500"
                             >
                               <div className="max-w-[19ch]">{service}</div>
                             </Link>
