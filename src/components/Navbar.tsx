@@ -163,7 +163,7 @@ export default function Navbar() {
               {isinsideLinkOpen && (
                 <motion.div
                   initial={{ height: 0, opacity: 0, padding: 0 }}
-                  animate={{ height: "216px", opacity: 1, padding: "36px 0px" }}
+                  animate={{ height: "216px", opacity: 1, padding: "24px 8px" }}
                   exit={{
                     opacity: 0,
                     height: 0,
